@@ -1,0 +1,282 @@
+
+.homepage-content {
+    display: flex;
+    flex-direction: column;
+  
+}
+.section{
+    padding-left: 6%;
+    padding-right: 6%;
+}
+
+.home-description, .home-histoire{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    justify-content: center;
+    width: auto;
+    height: 100vh;
+}
+.home-description{
+background-color: var(--beige-claire);
+}
+.home-histoire{
+    background-color: var(--verte-claire);
+}
+.home-text {
+    flex: 1;
+    text-align: center; 
+    margin-left: 30px;
+}
+
+.titre-descrp {
+    text-align: center; 
+    margin-bottom: 50px;
+    font-size: 2.5rem; 
+    color: var(--verte-fonce);
+}
+
+.paragraphe-home {
+    text-align: center; 
+    line-height: 1.5; 
+    font-size: 1.5rem;
+    color: var(--marron-fonce);
+}
+.paragraphe-home.mots {
+    color: var(--beige-claire);
+}
+.home-text-histoire{
+    margin-right: 50px;
+}
+
+.home-mots-createur {
+    display: grid;
+    grid-template-columns: 1fr;
+    align-items: center;
+    justify-content: center;
+    width: auto;
+    height: 100vh;
+    background-image: url('/public/Images/Ferme-pano.jpg');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    overflow: hidden; 
+    background-attachment: fixed; 
+}
+
+.home-mots-createur::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: auto;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); 
+}
+.home-text-createur h2{
+    color: var(--verte-claire);
+}
+.home-text-createur{
+    padding: 0 25%;
+    position: relative;
+    z-index: 2; 
+    text-align: center; 
+    color: white;
+}
+.mots{
+    width: 90%;
+}
+
+/*             Bottom*/
+.home-bottom{
+    padding: 20px 0;
+    display: grid;
+    grid-template-columns: 90%;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 80vh;
+    background-color: var(--beige-claire);
+}
+.paragraphe-bottom-home.un{
+    font-size: 1.5rem;
+    text-align: left;
+    width: 75%;
+    color: var(--marron-fonce);
+    padding-left: 50px;
+}
+.titres-bottom.un {
+    text-align: end;
+    padding-right: 100px;
+    
+}
+.paragraphe-bottom-home.deux{
+    font-size: 1.5rem;
+    text-align: right;
+    width: 75%;
+    padding-left: 20%;
+    justify-content: end;
+    color: var(--marron-fonce);
+}
+.titres-bottom.deux {
+    
+    padding-left: 100px;
+    
+}
+.titres-bottom{
+    color: var(--verte-fonce);
+    font-size: 2rem;
+    text-transform: uppercase;
+    display: block;
+   
+}
+hr {
+    border: none;
+    border-top: 1.5px solid var(--marron-fonce); /* Color y grosor de la línea */
+    margin: 0 40px;
+    width: 50%;
+    justify-self: center; /* Espacio entre los dos divs y la línea */
+}
+/*--------- Buttons bottom---------*/
+
+.button-home {
+    --b: 3px;   /* border thickness */
+    --s: .15em; /* size of the corner */
+    --c: var(--verte-fonce);
+    
+    padding: calc(.05em + var(--s)) calc(.3em + var(--s));
+    color: var(--c);
+    --_p: var(--s);
+    background:
+      conic-gradient(from 90deg at var(--b) var(--b),#0000 90deg,var(--c) 0)
+      var(--_p) var(--_p)/calc(100% - var(--b) - 2*var(--_p)) calc(100% - var(--b) - 2*var(--_p));
+    transition: .3s linear, color 0s, background-color 0s;
+    outline: var(--b) solid #0000;
+    outline-offset: .2em;
+  }
+  .button-home:hover,
+  .button-home:focus-visible{
+    --_p: 0px;
+    outline-color: var(--c);
+    outline-offset: .05em;
+    background-color: var(--verte-claire);
+  }
+  .button-home:active {
+    background: var(--c);
+    color: #fff;
+  }
+  .button-home  {
+    font-family: 'KrabulerFont';
+    font-weight: bold;
+    font-size: 1.5rem;
+    cursor: pointer;
+    border: none;
+    width: 180px;
+    height: 70px;
+    margin-left: 100px;
+    justify-self: left;
+    padding: 1rem .5rem;
+    
+  }
+  .link-concept{
+    justify-self: right;
+    margin-right: 100px;
+    text-align: center;
+    width: 180px;
+    height: 35px;
+  }
+
+
+
+@keyframes show {   
+    from{
+        opacity: 0;
+        scale: 25%;
+    }
+
+    to {
+        opacity: 1;
+        scale: 100%;
+    }
+}
+
+.images-sections {
+    view-timeline-name: --image;
+    view-timeline-axis: block;
+
+    animation-timeline: --image;
+    animation-name: show;
+
+    animation-range: entry 25% cover 40%;
+    animation-fill-mode: both;
+}
+
+.images-home {
+    flex: 1;
+    text-align: center; 
+}
+
+.images-home img {
+    max-width: 100%;
+    height: fit-content;
+    display: block;
+    margin: 0 auto; 
+}
+.images-home.histoire img {
+    max-width: 70%; 
+    height: auto;
+}
+
+@media screen and (max-width: 960px)  {
+    .home-description, .home-histoire {
+        display: flex;
+        flex-direction: column;
+        height: 50%; 
+    }
+
+    .home-text {
+        margin-top: 0;
+        margin-bottom: 0; 
+        margin-right: 20px;
+        padding-bottom: 30px; 
+        height: 10px;
+        padding-top: 10px;
+    }
+    .home-histoire{
+        padding-top: 30px;
+    }
+    .home-text-histoire{
+        padding: 0 10%;
+        margin: 0;
+    }
+    .images-home {
+        margin-top: 0; 
+    }
+    .home-text-createur{
+        padding: 0 5%;
+    }
+}
+
+@media screen and (max-width: 750px) {
+
+    .home-bottom{
+        grid-template-columns: 100%;
+        height: 100vh;
+    }
+    .paragraphe-bottom-home.un{
+        width: 90%;
+        padding-left: 20px;
+    }
+    .titres-bottom.un {
+        padding-right: 40px;
+        
+    }
+    .paragraphe-bottom-home.deux{
+        width: 90%;
+        padding-left: 20px;
+    }
+    .titres-bottom.deux {
+        padding-left: 40px;
+    }
+
+}

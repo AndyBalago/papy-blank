@@ -1,0 +1,50 @@
+/* SocialMediaModule.css */
+.social-media-module {
+    position: fixed;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    display: grid;
+    grid-template-columns: 1fr;
+    align-items: end;
+    z-index: 1000; 
+    width: 50px; 
+}
+
+.social-icon {
+    font-size: 25px;
+    color: var(--beige-claire); 
+    text-decoration: none;
+    transition: color 0.3s ease;
+    width: 100%; 
+    padding: 10px; 
+    box-sizing: border-box; 
+    text-align: center; 
+    background-color: var(--verte-fonce);
+    margin-top: 2px;
+    border-radius: 5px 0 0 5px;
+}
+
+.social-icon:hover {
+    background-color: var(--verte-claire);
+}
+
+@media (max-width: 750px) {
+    .social-media-module {
+        top: auto;
+        bottom: 0;
+        right: 50%;
+        transform: translateX(50%);
+        grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
+        width: 80%;
+        height: 100%;
+        gap: 5px;
+    }
+    
+    .social-icon {
+        border-radius: 5px 5px 0 0;
+        margin-top: 0;
+        margin-right: 2px;
+        font-size: 30px;
+    }
+}

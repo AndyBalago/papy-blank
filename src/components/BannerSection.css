@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Grandstander:ital,wght@0,100..900;1,100..900&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Poetsen+One&display=swap');
+
+.banner-container {
+    position: relative;
+    width: 100%;
+    height: 100vh; /* Ajusta la altura según sea necesario */
+    overflow: hidden;
+}
+
+.background-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.video-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Ajusta el color y la opacidad del overlay según lo necesites */
+    z-index: -1;
+}
+
+.banner-decript {
+    /* background: url('images/Home1.jpg') center center/cover no-repeat; */
+    padding-top: 50px;
+    padding-bottom: 30px;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    object-fit: contain;
+}
+.sous-titre-banner{
+    color: var(--verte-claire);
+    /* margin-top: -70px; */
+    padding-bottom: 80px;
+    font-size: 2rem;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    
+}
+.titre-banner{
+    color: var(--beige-claire);
+    font-size: 100px;
+    margin-top: -100px;
+    font-size: 4rem;
+    margin-bottom: 0;
+    font-family: "Josefin Sans", sans-serif;
+
+}
+.para-banner{
+    color: var(--beige-claire);
+    font-size: 1.5rem;
+}
+
+.banner-btns {  
+    margin-top: 20px
+    
+}
+
+.banner-btns .btn {
+    margin: 6px;
+}
+
+.shop-cart {
+    padding-left: 4px;
+}
+
+@media screen and (max-width: 96px){
+    .banner-decript > h2 {
+        font-size: 70px;
+        margin-top: -150px;
+    }
+}
+
+@media screen and (max-width: 768px){
+    .banner-decript > h2 {
+        font-size: 50px;
+        margin-top: -100px;
+    }
+    .btn-mobile {
+        display: block;
+        text-decoration: none;
+    }
+
+    .btn {
+        width: 100%;
+    }
+}
