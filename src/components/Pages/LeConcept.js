@@ -54,7 +54,7 @@ const LeConcept = () => {
               Ces desserts sont mis en avant par différents préparations grâce aux fruits
               de la ferme (pommes, poires, mirabelles, coings, fraises, framboises, groseilles,...)
             </p>
-            <button className='button-concept'>COMMANDER</button>
+            <button className='button-concept'><a className='vinculo-commander-concept' href='https://papyblank.byclickeat.fr/store/entrypoint'>COMMANDER</a></button>
           </div>
         </div>
       </section>
@@ -66,7 +66,7 @@ const LeConcept = () => {
               Des plats simples mais surtout savoreux mettant en avants les légumes de la ferme.
               Des plats inconturnables pour vos brunchs ou vos déjeuners avec un seul objectif: le goût.
             </p>
-            <button className='button-concept'>COMMANDER</button>
+            <button className='button-concept'><a className='vinculo-commander-concept' href='https://papyblank.byclickeat.fr/store/entrypoint'>COMMANDER</a></button>
           </div>
           <figure className='img-container img-sale'>
             <img src='/Images/tartines-sal.jpg' alt='Le salé' />

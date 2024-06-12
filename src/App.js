@@ -19,6 +19,7 @@ function App() {
     <ScrollToTop />
     <Navbar/>
     <Routes>
+      <Route path='/' exact Component={Home}/>
       <Route path='/Home' exact Component={Home}/>
       <Route path='/LaFerme' Component={LaFerme}/>
       <Route path='/LeConcept' Component={LeConcept}/>

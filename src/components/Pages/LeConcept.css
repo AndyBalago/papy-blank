@@ -8,6 +8,10 @@
     padding-left: 6%;
     padding-right: 6%;
 }
+.vinculo-commander-concept{
+    text-decoration: none;
+    color: var(--beige-claire);
+}
 
 .titres {
     font-size: 2.5rem; 
@@ -26,14 +30,14 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-image: url('/public/Images/Legumes 2.jpg');
+    background-image: url('/public/Images/Cultive.png');
     background-size: cover;
     background-position: center;
     position: relative;
     overflow: hidden; 
     background-attachment: fixed;
     z-index: 2;
-    width: 100%;
+    width: auto;
     height: 100vh;
     clip-path: polygon(0 0, 100% 0, 100% 90%, 50% 100%, 0 90%);
 }
@@ -53,12 +57,15 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 60px;
     padding-bottom: 10px;
     text-align: justify;
 }
 .titre-concept{
-    text-shadow: 1px 1px 2px var(--beige-claire);
+    text-shadow: 1px 1px 2px var(--verte-claire);
+    font-size: 4rem;
+    margin-top: -5%;
+    color: var(--beige-claire);
+   
 }
 .sous-titre-descr {
     font-size: 2rem;
@@ -66,7 +73,7 @@
     background-color: var(--verte-claire); 
     border-radius: 5rem; 
     padding: 0.5rem;
-    margin-top: 5px;
+    margin-top: 2%;
     text-align: center;
 }
 
@@ -253,21 +260,44 @@
     margin-top: -10px;
     color: var(--marron-fonce);
 }
+/*------Transition images-------*/
+@keyframes show {   
+    from{
+        opacity: 0;
+        scale: 25%;
+    }
+
+    to {
+        opacity: 1;
+        scale: 100%;
+    }
+}
+
+.img-container {
+    view-timeline-name: --image;
+    view-timeline-axis: block;
+
+    animation-timeline: --image;
+    animation-name: show;
+
+    animation-range: entry 25% cover 40%;
+    animation-fill-mode: both;
+}
+
 /*------- Les Produits section --------*/
 
 .les-produits{
-    height: 70vh;
     display: flex;
     justify-content: right;
     align-items: center;
-    background-image: url('/public/Images/Assorti-legumes.JPG');
+    background-image: url('/public/Images/AssortiLegumes.JPG');
     background-size: cover;
     background-position: center;
     position: relative;
     overflow: hidden; 
     background-attachment: fixed;
     z-index: 2;
-    width: 100%;
+    width: auto;
     height: 80vh;
 }
 
@@ -285,7 +315,7 @@
     width: 50%;
     display: flex;
     flex-direction: column;
-    justify-content: center; /* Ajuste a 'center' para centrar verticalmente */
+    justify-content: center; 
     align-items: center;
     color: var(--marron-fonce);
     background-color: rgba(255, 245, 224, 0.906);
@@ -300,6 +330,8 @@
 }
 
 @media screen and (max-width: 960px){
+    
+ 
     .description-concept {
         clip-path: polygon(0 0, 100% 0, 100% 95%, 50% 100%, 0 95%);
     }
@@ -332,14 +364,19 @@
 }
 
 @media screen and (max-width: 750px){
-    
+  
     .description-concept {
         clip-path: polygon(0 0, 100% 0, 100% 95%, 50% 100%, 0 95%);
+    }
+    .titre-concept{
+        padding-top: 10%;
+    }
+    .paragraphe-descr {
+        width: 100%;
     }
     .vision {
         height: auto;
         clip-path: polygon(0 0%, 100% 0, 100% 100%, 0% 100%);
-       
     }
     .wrapper-vision {
         display: grid;

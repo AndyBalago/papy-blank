@@ -6,7 +6,11 @@
     height: 100vh; /* Ajusta la altura según sea necesario */
     overflow: hidden;
 }
-
+.vinculo-commander-banner{
+    text-decoration: none;
+    color: var(--beige-claire);
+    
+}
 .background-video {
     position: absolute;
     top: 0;
@@ -47,14 +51,17 @@
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     
 }
-.titre-banner{
+/* .titre-banner{
     color: var(--beige-claire);
     font-size: 100px;
-    margin-top: -100px;
+    margin-top: -110px;
     font-size: 4rem;
-    margin-bottom: 0;
+    margin-bottom: -1%;
     font-family: "Josefin Sans", sans-serif;
-
+} */
+.logo_banner_home{
+    width: 35%;
+    margin-top: -100px;
 }
 .para-banner{
     color: var(--beige-claire);
@@ -62,7 +69,7 @@
 }
 
 .banner-btns {  
-    margin-top: 20px
+    margin-top: 25px
     
 }
 
@@ -70,8 +77,10 @@
     margin: 6px;
 }
 
-.shop-cart {
-    padding-left: 4px;
+.shop-icon {
+   padding-left: 6px;
+   
+    font-size: 2rem;
 }
 
 @media screen and (max-width: 96px){

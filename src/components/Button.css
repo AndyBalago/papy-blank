@@ -10,6 +10,10 @@
     border: none;
     cursor: pointer;
     font-family: 'KrabulerFont';
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
 }
 
 .btn--primary{

@@ -18,8 +18,8 @@ function Footer() {
       <div className='infos-footer-container'>
         <div className='footer-infos-essentiels'>
           <h3>Adresse</h3>
-          <p></p>
-          <p></p>
+          <p>368 Rue de l'Église,</p>
+          <p>59320 Erquinghem-le-Sec</p>
         </div>
         <div className='footer-reseaux'>
           <h3>Suivez nous!</h3>
@@ -28,7 +28,7 @@ function Footer() {
           <a href='mailto:papyblank@gmail.com'><FaEnvelope className='icons-footer-reseaux' /></a>
         </div>
         <div className='footer-reservation'>
-          <h3>Reservation</h3>
+          <h3>Commandes</h3>
           <p><a href='tel:+33661752886'>+33 6 61 75 28 86</a></p>
           <a href="mailto:papyblank@gmail.com">papyblank@gmail.com</a>
         </div>

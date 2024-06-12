@@ -4,7 +4,7 @@ import { IoMenu } from "react-icons/io5";
 import { MdOutlineRestaurantMenu } from "react-icons/md";
 import './Navbar.css';
 import { Button } from './Button';
-import { FaShoppingCart } from "react-icons/fa";
+import { MdFoodBank } from "react-icons/md";
 
 function Navbar() {
     const [click, setClick] = useState(false);
@@ -65,7 +65,7 @@ function Navbar() {
                         </li>
                     </ul>
                     <div className='bouton-boutique'>
-                    <Button  buttonStyle='btn--primary'><span className='button-text'>Boutique</span><FaShoppingCart className='shop-cart'/></Button>
+                    <Button  buttonStyle='btn--primary' className='button-shop-nav'><span className='button-text'><a className='vinculo-commander-navbar' href='https://papyblank.byclickeat.fr/store/entrypoint'>Boutique</a></span><MdFoodBank className='shop-icon'/></Button>
                     </div>
                 </div>
             </nav>

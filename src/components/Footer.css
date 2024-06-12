@@ -3,6 +3,10 @@
     grid-template-columns: 1fr;
     justify-items: center;
     background-color: var(--verte-claire);
+    
+}
+.footer-infos-essentiels p{
+    color: var(--marron-fonce);
 }
 a{
     text-decoration: none;
@@ -14,13 +18,15 @@ a{
     justify-items: center;
     padding: 10px 0;
     text-align: center;
+    padding-top: 3%;
+    height: 30vh;
 }
 .infos-footer-container h3{
     color: var(--marron-fonce);
     font-size: 1.5rem;
 }
 .icons-footer-reseaux{
-    padding: 5px;
+    padding: 15px;
     color: var(--marron-fonce);
 }
 .icons-footer-reseaux:hover, .footer-politiques a:hover, .footer-reservation a:hover{
@@ -28,7 +34,7 @@ a{
     cursor: pointer;
 }
 .footer-reseaux a{
-    font-size: 2rem;
+    font-size: 3rem;
 }
 .footer-reservation a{
     color: var(--marron-fonce);
@@ -59,9 +65,9 @@ color: var(--marron-fonce);
 @media screen and (max-width: 750px){
     
     .infos-footer-container{
-       
         grid-template-columns: 1fr;
         gap: 20px;
+        height: auto;
         
     }
     .copyright{

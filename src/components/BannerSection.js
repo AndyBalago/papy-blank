@@ -1,7 +1,7 @@
 import React from 'react'
 import { Button } from './Button'
 import './BannerSection.css'
-import { FaShoppingCart } from "react-icons/fa";
+import { MdDeliveryDining } from "react-icons/md";
 
 const BannerSection = () => {
   return (
@@ -13,14 +13,15 @@ const BannerSection = () => {
     </video>
     <div className='banner-decript'>
         <h3 className='sous-titre-banner'>Bienvenue chez</h3>
-        <h2 className='titre-banner'>Papy Blank</h2>
+        {/* <h2 className='titre-banner'>Papy Blank</h2> */}
+        <img className='logo_banner_home' src="./Images/logo_banner.png" alt=""/>
         <p className='para-banner'>La ferme directment au resto</p>
         <div className='banner-btns'>
-            <Button className='btns' buttonStyle='btn--outline' buttonSize='btn--large'>
+            {/* <Button className='btns' buttonStyle='btn--outline' buttonSize='btn--large'>
                 Reservation
-            </Button>
-            <Button className='btns' buttonStyle='btn--primary' buttonSize='btn--large'>
-                Boutique <FaShoppingCart className='shop-cart'/>
+            </Button> */}
+            <Button className='btns button-banner-commander' buttonStyle='btn--primary' buttonSize='btn--large'>
+                <a className='vinculo-commander-banner' href='https://papyblank.byclickeat.fr/store/entrypoint'>Commander</a> <MdDeliveryDining className='shop-icon'/>
             </Button>
         </div>
     </div>
