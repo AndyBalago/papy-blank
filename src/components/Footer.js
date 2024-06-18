@@ -18,8 +18,10 @@ function Footer() {
       <div className='infos-footer-container'>
         <div className='footer-infos-essentiels'>
           <h3>Adresse</h3>
+          <a href='https://g.co/kgs/gKsu4jN' target="_blank" rel="noreferrer">
           <p>368 Rue de l'Église,</p>
           <p>59320 Erquinghem-le-Sec</p>
+          </a>
         </div>
         <div className='footer-reseaux'>
           <h3>Suivez nous!</h3>

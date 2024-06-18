@@ -1,10 +1,8 @@
 import React from 'react'
 import './LaFerme.css'
-import { CookiesProvider, useCookies } from 'react-cookie';
+
 
 const LaFerme = () => {
-
-  const [cookies, setCookie, removeCookie] = useCookies(['miCookie']);
 
 
   return (
