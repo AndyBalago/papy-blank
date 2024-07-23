@@ -77,7 +77,7 @@
     margin: 6px;
 }
 
-.shop-icon {
+.moto-icon {
    padding-left: 6px;
    
     font-size: 2rem;
@@ -94,6 +94,10 @@
     .banner-decript > h2 {
         font-size: 50px;
         margin-top: -100px;
+    }
+    .logo_banner_home{
+        width: 90%;
+        
     }
     .btn-mobile {
         display: block;

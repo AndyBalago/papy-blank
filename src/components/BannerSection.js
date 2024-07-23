@@ -15,13 +15,13 @@ const BannerSection = () => {
         <h3 className='sous-titre-banner'>Bienvenue chez</h3>
         {/* <h2 className='titre-banner'>Papy Blank</h2> */}
         <img className='logo_banner_home' src="./Images/logo_banner.png" alt=""/>
-        <p className='para-banner'>La ferme directment au resto</p>
+        <p className='para-banner'>Une cuisine locale avec des produits de la ferme</p>
         <div className='banner-btns'>
             {/* <Button className='btns' buttonStyle='btn--outline' buttonSize='btn--large'>
                 Reservation
             </Button> */}
             <Button className='btns button-banner-commander' buttonStyle='btn--primary' buttonSize='btn--large'>
-                <a className='vinculo-commander-banner' href='https://papyblank.byclickeat.fr/store/entrypoint'>Commander</a> <MdDeliveryDining className='shop-icon'/>
+                <a className='vinculo-commander-banner' href='https://papyblank.byclickeat.fr/store/entrypoint'>Commander</a> <MdDeliveryDining className='moto-icon'/>
             </Button>
         </div>
     </div>

@@ -29,10 +29,10 @@ const Contact = () => {
     };
 
     emailjs.send(
-      'service_qnped8a',
-      'template_tir4sj8',
+      'service_z16g8so',
+      'template_45kqmmg',
       templateParams,
-      'p8BQg3mBAA4PXk3v2'
+      '85PoiLF_Ft0vRsclS'
     )
       .then((response) => {
         console.log('SUCCESS!', response.status, response.text);

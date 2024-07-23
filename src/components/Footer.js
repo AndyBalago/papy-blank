@@ -30,7 +30,7 @@ function Footer() {
           <a href='mailto:papyblank@gmail.com'><FaEnvelope className='icons-footer-reseaux' /></a>
         </div>
         <div className='footer-reservation'>
-          <h3>Commandes</h3>
+          <h3>Contact</h3>
           <p><a href='tel:+33661752886'>+33 6 61 75 28 86</a></p>
           <a href="mailto:papyblank@gmail.com">papyblank@gmail.com</a>
         </div>

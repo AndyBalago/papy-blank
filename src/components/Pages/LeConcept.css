@@ -41,6 +41,9 @@
     height: 100vh;
     clip-path: polygon(0 0, 100% 0, 100% 90%, 50% 100%, 0 90%);
 }
+.negrita-exp-concept{
+    color: var(--verte-claire);
+}
 
 .description-concept::before {
     content: '';
@@ -216,6 +219,9 @@
     height: 70px;
     justify-self: center;
   }
+  .negrita-text-sucre{
+    color: var(--verte-fonce);
+  }
 
   /*--- Sale Section---*/
 .le-sale{
@@ -367,9 +373,12 @@
   
     .description-concept {
         clip-path: polygon(0 0, 100% 0, 100% 95%, 50% 100%, 0 95%);
+        height: auto;
+        padding-bottom: 5%;
     }
     .titre-concept{
-        padding-top: 10%;
+        padding-top: 35%;
+        
     }
     .paragraphe-descr {
         width: 100%;

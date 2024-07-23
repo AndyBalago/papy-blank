@@ -119,6 +119,11 @@
 }
 
 @media screen and (max-width: 960px){
+    .ferme-cont {
+        height: auto;
+        padding-top: 15%;
+        padding-bottom: 20%;
+    }
     .descr-ferme-div {
         grid-template-columns: 1fr;
         gap: 0;
@@ -130,7 +135,20 @@
     .paragraphe-descr-ferme {
         width: 100%;
     }
+    .legumes-cont, .fruits-cont, .histoire-cont{
+        height: auto;
+        padding: 5% 5%;
+        padding-bottom: 10%;
+    }
+      .descr-ferme-div {
+        gap: 10%;
+    }
+    .map-cont {
+     
+        height: 300px;
+       
     
+    }
 }
 @media screen and (max-width: 750px){
    
@@ -141,17 +159,12 @@
     }
   
     .ferme-cont {
-        padding-top: 40%;
-        margin-bottom: 20%;
+        padding-top: 30%;
+        padding-bottom: 20%;
         height: auto;
     }
-    .descr-ferme-div {
-        gap: 10%;
-    }
-    .map-cont {
-     
-        height: 300px;
-        margin-bottom: 30%;
     
+    .map-cont {
+        height: 300px;
     }
 }

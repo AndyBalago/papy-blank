@@ -31,20 +31,24 @@
 
 @media (max-width: 750px) {
     .social-media-module {
-        top: auto;
-        bottom: 0;
-        right: 50%;
-        transform: translateX(50%);
-        grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
-        width: 80%;
-        height: 100%;
-        gap: 5px;
+        bottom: 0;  /* Fija el elemento en la parte inferior */
+        top: auto;  /* Elimina cualquier fijación en la parte superior */
+        right: 50%;  /* Centra horizontalmente */
+        transform: translateX(50%);  /* Ajusta para centrar correctamente */
+        grid-template-columns: repeat(auto-fit, minmax(30px, 1fr)); /* Reduce el tamaño mínimo de las columnas */
+        width: 60%;  /* Reduce el ancho del banner */
+        height: auto;  /* Ajusta la altura según el contenido */
+        gap: 3px; /* Reduce el espacio entre iconos */
+        padding: 5px;  /* Añade un padding para mejor visualización */
+        margin-bottom: -10px;
     }
     
     .social-icon {
+        font-size: 25px;  /* Reduce el tamaño de la fuente */
+        padding: 8px;  /* Reduce el padding de los iconos */
         border-radius: 5px 5px 0 0;
         margin-top: 0;
         margin-right: 2px;
-        font-size: 30px;
+        
     }
 }

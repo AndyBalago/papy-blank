@@ -1,0 +1,77 @@
+$time: 0.3s;
+
+
+
+.gallery {
+  display: grid;
+  grid-template-rows: repeat(2, 24vh); /* Altura aumentada en 20% */
+  grid-template-columns: repeat(2, 36vw); /* Reducido el ancho en 20% */
+  transition: all $time ease(gravity);
+  background-color: #82a6cb;
+  border-radius: 10px;
+  padding: 0.25em;
+  cursor: zoom-in;
+
+  /* Estilos para pantallas de 390px */
+  @media (max-width: 390px) {
+    grid-template-rows: repeat(2, 28vh); /* Aumenta la altura */
+    grid-template-columns: repeat(2, 40vw); /* Reducido el ancho en 20% */
+  }
+
+  /* Estilos para pantallas de 950px */
+  @media (min-width: 391px) and (max-width: 950px) {
+    grid-template-rows: repeat(2, 24vh); /* Altura aumentada en 20% */
+    grid-template-columns: repeat(2, 36vw); /* Reducido el ancho en 20% */
+  }
+
+  /* Estilos para pantallas de 1440px */
+  @media (min-width: 951px) and (max-width: 1440px) {
+    grid-template-rows: repeat(2, 24vh); /* Altura aumentada en 20% */
+    grid-template-columns: repeat(2, 36vw); /* Reducido el ancho en 20% */
+  }
+
+  /* Estilos para pantallas mayores a 1440px */
+  @media (min-width: 1441px) {
+    grid-template-columns: repeat(4, 18vw); /* Reducido el ancho en 20% */
+    grid-template-rows: 60vh; /* Altura aumentada en 20% */
+  }
+}
+
+.img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  transition: all $time/2 ease(downhill);
+  position: relative;
+  box-shadow: 0 0 0 #0000;
+  opacity: 0.67;
+  filter: sepia(80%) hue-rotate(180deg);
+
+  &:first-child {
+    border-radius: 10px 10px 0 0;
+  }
+  &:last-child {
+    border-radius: 0 0 10px 10px;
+  }
+
+  /* Estilos específicos para la imagen central */
+  &:nth-child(2) {
+    z-index: 1; /* Para asegurar que esté sobre las otras imágenes */
+  }
+
+  &:hover {
+    opacity: 1;
+    z-index: 2; /* Asegura que la imagen esté sobre las otras imágenes */
+    box-shadow: 1em 1em 1em #0004;
+    transition: all $time ease(downhill);
+    filter: sepia(0%) hue-rotate(0deg);
+    border-radius: 5px;
+
+    /* Zoom reducido del 50% */
+    transform: scale(1.5); /* Cambia de 3x a 1.5x */
+    left: -25%; /* Ajusta para centrar el zoom */
+    top: -25%; /* Ajusta para centrar el zoom */
+  }
+}

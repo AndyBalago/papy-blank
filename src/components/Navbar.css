@@ -1,3 +1,5 @@
+/* Navbar.css */
+
 .navbar {
   background-color: transparent;
   height: 80px;
@@ -13,10 +15,12 @@
   font-family: 'KrabulerFont';
   transition: background-color 0.3s ease;
 }
-.vinculo-commander-navbar{
+
+.vinculo-commander-navbar {
   text-decoration: none;
   color: var(--beige-claire);
 }
+
 .navbar.scrolled {
   background: rgb(244, 237, 227);
 }
@@ -33,6 +37,12 @@
   justify-self: start;
   margin-left: 5px;
   cursor: pointer;
+  transition: transform 0.3s ease; /* Añade una transición suave */
+  transform-origin: center; /* Establece el punto de origen para la transformación en el centro */
+}
+
+.navbar-logo:hover {
+  transform: scale(1.05); /* Escala el logo un 5% */
 }
 
 .navbar-logo img {
@@ -58,7 +68,9 @@
   justify-content: end;
   margin-right: 2rem;
 }
-
+.mobile-shop-icon{
+  display: none;
+}
 .nav-item {
   height: 80px;
 }
@@ -73,6 +85,9 @@
   text-transform: uppercase;
   margin-top: 15px;
   height: 50px;
+}
+.ligne-nav-menu{
+  display: none;
 }
 
 .dtype {
@@ -95,14 +110,20 @@
 .menu-icon {
   display: none;
 }
+.panier-icon {
+  font-size: 20px; 
+  width: 20px; 
+  height: 20px; 
+  padding-left: 7px;
+}
 
 @media screen and (max-width: 960px) {
   .NavbarItems {
     position: relative;
   }
-  .bouton-boutique{
-   margin-left: 450px;
-   margin-bottom: 10px;
+  .bouton-boutique {
+    margin-left: 450px;
+    margin-bottom: 10px;
   }
 
   .nav-menu {
@@ -134,7 +155,7 @@
   }
 
   .nav-links:hover {
-    background-color: #fff;
+    background-color: var(--verte-claire);
     color: #242424;
     border-radius: 0;
   }
@@ -142,8 +163,7 @@
   .navbar-logo {
     position: absolute;
     top: 0;
-    left: 0;
-    transform: translate(25%, 50%);
+    left: 10%;
     height: 0;
     width: auto;
   }
@@ -173,6 +193,10 @@
     transition: all 0.3s ease-out;
     border: 1px solid red;
   }
+  .ligne-nav-menu{
+    display: block;
+    border: 1px dashed var(--marron-fonce);
+  }
 
   .nav-links-mobile:hover {
     background: #fff;
@@ -182,21 +206,26 @@
 }
 
 @media screen and (max-width: 750px) {
-    
-  .bouton-boutique{
-    margin-left: 100px;
-    margin-bottom: 10px;
-   }
-   .button-text{
-    
-    display: flex;
-    justify-content: center;
-    
-   }
-   .shop-cart{
-    font-size: 1.5rem;
-    text-align: center;
-   }
-   
+  .bouton-boutique {
+    display: none; /* Oculta el botón en pantallas pequeñas */
+  }
 
+  .mobile-shop-icon {
+    display: flex; /* Muestra solo el icono en pantallas pequeñas */
+    font-size: 50px;
+    right: 25%;
+    position: absolute;
+  }
+  .shop-icono{
+    color: var(--marron-fonce);
+    filter: drop-shadow(0 0 30px var(--beige-claire));
+  }
+  .navbar-logo{
+    margin-left: -5%;
+  }
+  .navbar-logo:hover {
+    transform: none; 
+  }
+  
+  
 }

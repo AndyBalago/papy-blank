@@ -11,7 +11,7 @@ import Politiques from './components/Pages/Politiques';
 import MentionLegales from './components/Pages/MentionLegales';
 import ReseauxSociaux from './components/ReseauxSociaux';
 import ScrollToTop from './components/ScrollToTop'
-import CookieConsent from "react-cookie-consent";
+
 
 
 
@@ -32,7 +32,7 @@ function App() {
         </Routes>
         <ReseauxSociaux />
         <Footer></Footer>
-        <CookieConsent
+        {/* <CookieConsent
           onAccept={(acceptedByScrolling) => {
             if (acceptedByScrolling) {
               // triggered if user scrolls past threshold
@@ -55,7 +55,7 @@ function App() {
         >
           Ce site Web utilise des cookies pour améliorer l'expérience utilisateur.{" "}
           <span style={{ fontSize: "10px" }}></span>
-        </CookieConsent>
+        </CookieConsent> */}
       </Router>
 
     </>
