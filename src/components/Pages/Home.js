@@ -32,51 +32,62 @@ function Home() {
                 <section className='home-description section'>
                     <div className='home-text'>
                         <h2 className='titre-descrp titre-descr'> PAPY BLANK C'EST QUOI ?</h2>
-                        <p className='paragraphe-home para-descr'>Papy Blank est un concept unique : Nous transformons des
+                        <p className='paragraphe-home para-descr para-home'>Papy Blank est un concept unique : Nous transformons des
                             produits cultivés dans la ferme familiale pour vous concocter
-                            des brunchs, déjeuner ou goûter</p>
+                            des brunchs, déjeuners ou goûters.<br /><br />
+                            Des plats livrés directement chez vous sous forme de
+                            box gourmandes. Ces box mettent en valeur des produits de
+                            qualité, offrant un plaisir aussi bien visuel que gustatif.
+                        </p>
+                        <span className='cont-buttons'>
+                            <button className='buttom-concept-home-intro'>
+                                <Link to='/leconcept' className='link-concept-intro'>LE CONCEPT</Link>
+                            </button>
+                        </span>
                     </div>
                     <figure className='images-home descr-img'>
-                        <img className='images-sections imagen-home-descr' src='/Images/Brunch5.jpeg' alt='Home' />
+                        <img className='images-sections-intro imagen-home-descr' src='/Images/Brunch5.jpeg' alt='Home' />
                     </figure>
                 </section>
-                <div class="section-divider"></div>
+                <hr class="section-divider" />
+                <hr class="section-divider2" />
                 <section className='home-histoire section'>
                     <figure className='images-home histoire-img'>
-                        <img className='images-sections imagen-hist' src='/Images/Ferme-histoire.png' alt='Home' />
+                        <img className='images-sections-intro imagen-hist' src='/Images/Ferme-histoire.png' alt='Home' />
                     </figure>
                     <div className='home-text-histoire'>
                         <h2 className='titre-descrp titre-hist'> PAPY BLANK, UNE HISTOIRE FAMILIALE</h2>
-                        <p className='paragraphe-home para-hist'>
-                            Mélange de plusieurs savoir-
-                            faire, mes parents agriculteur cultivent des fruits et légumes à
-
-                            quelques kilomètre de Lille.<br />
-                            Moi, professionnel de la
-                            restauration, je les transforme pour les sublimer.
+                        <p className='paragraphe-home para-hist para-home'>
+                            Papy Blank réunit plusieurs savoir-faire.
+                            Mes parents cultivent des fruits et légumes en agriculture
+                            raisonnée, avec pour objectif de préserver les nutriments
+                            dans les sols pour garantir des produits qui ont du goût. <br /><br />
+                            En tant que professionnel de la restauration, je m'occupe de les
+                            cuisiner pour les sublimer.
                         </p>
+                        <span className='cont-buttons'><button className='buttom-laferme-home'><Link to='/laferme' className='link-ferme-intro'>LA FERME</Link></button></span>
                     </div>
                 </section>
                 {/* <div class="skew-c"></div> */}
                 <section className='home-mots-createur section'>
                     <div className='home-text-createur'>
                         <h2 className='titre-descrp'>MOTS DU CRÉATEUR:</h2>
-                        <p className='paragraphe-home mots'>
+                        <p className='mots '>
                             “Après de multiples expériences en
                             restauration en France et à l'étranger, je
-                            voulais rentrer dans le nord et créer un
-                            concept qui me ressemble. Une offre
+                            voulais rentrer dans le Nord et créer un
+                            concept qui me ressemble. Une cuisine
                             mettant en avant mon savoir faire et celui
                             de mes parents”
                         </p>
-                        <p className='paragraphe-home signature-chef mots'>Mathieu</p>
+                        <p className='paragraphe-home signature-chef mots para-home'>Mathieu</p>
                         {/* <img className='foto-chef' src="./Images/foto_chef2.jpg" alt=""></img> */}
                     </div>
                 </section>
                 <section className='home-bottom section'>
                     <div className='container-concept-home'>
                         <div className='text-concept-home'>
-                            <p className='paragraphe-bottom-home un'>
+                            <p className='paragraphe-bottom-home un para-home'>
                                 Papy blank s'adapte en fonction des fruits et
                                 légumes récoltés afin de vous proposez une offre
                                 aussi bien sucrée que salée.
@@ -91,7 +102,7 @@ function Home() {
                             <a href="#target3">
                                 <img src='/Images/Fruits1.jpg' alt='' /></a>
                             <a href="#target4">
-                                <img src='/Images/Cultivo2.JPG' alt='' /></a>
+                                <img src='/Images/Cultivo2.jpg' alt='' /></a>
                         </div>
                         <div class="lightbox">
                             <div className="overlay" onClick={() => window.location.hash = "#!"}></div>
@@ -99,13 +110,13 @@ function Home() {
                                 <span>
                                 </span>
                                 <div class="content">
-                                    <img src='/Images/Cultive2.jpg' alt='' />
+                                    <img src='/Images/Cultivo1.jpg' alt='' />
                                 </div>
                                 <a href="#target2" class="nav" title="next"><FaArrowAltCircleRight /></a>
                             </div>
                             <div class="target" id="target2">
                                 <a href="#target1" class="nav" title="previous"><FaArrowAltCircleLeft /></a>
-                                <div class="content"><img src='/Images/sale-plat.jpg' alt='' /></div>
+                                <div class="content"><img src='/Images/Cultivo3.jpg' alt='' /></div>
                                 <a href="#target3" class="nav" title="next"><FaArrowAltCircleRight /></a>
                             </div>
                             <div class="target" id="target3">
@@ -115,7 +126,7 @@ function Home() {
                             </div>
                             <div class="target" id="target4">
                                 <a href="#target3" class=" nav" title="previous"><FaArrowAltCircleLeft /></a>
-                                <div class="content"><img src='/Images/Dessert2.JPG' alt='' /></div>
+                                <div class="content"><img src='/Images/Cultivo2.jpg' alt='' /></div>
                                 <span>
                                 </span>
                             </div>
@@ -123,13 +134,13 @@ function Home() {
                         </div>
 
                     </div>
-                    <hr></hr>
+                    <hr className='ligne-separatoire'></hr>
                     <div className='container-brunchs-home'>
                         <div className='gallerie-brunch-home thumbs'>
                             <a href="#target5">
                                 <img src='/Images/Brunch1.jpeg' alt='' /></a>
                             <a href="#target6">
-                                <img src='/Images/Brunch2.jpeg' alt='' /></a>
+                                <img src='/Images/BrunchInsta.png' alt='' /></a>
                             <a href="#target7">
                                 <img src='/Images/Brunch2.jpg' alt='' /></a>
                             <a href="#target8">
@@ -147,7 +158,7 @@ function Home() {
                             </div>
                             <div class="target" id="target6">
                                 <a href="#target5" class="nav" title="previous"><FaArrowAltCircleLeft /></a>
-                                <div class="content"><img src='/Images/Brunch2.jpeg' alt='' /></div>
+                                <div class="content"><img src='/Images/BrunchInsta.png' alt='' /></div>
                                 <a href="#target7" class="nav" title="next"><FaArrowAltCircleRight /></a>
                             </div>
                             <div class="target" id="target7">
@@ -164,10 +175,9 @@ function Home() {
                             <a href="#!" class="close nav"><IoMdCloseCircle /></a>
                         </div>
                         <div className='text-brunch-home'>
-                            <p className='paragraphe-bottom-home deux'>
+                            <p className='paragraphe-bottom-home deux para-home'>
                                 Nous vous proposons des box brunch sucré,
-                                salé ainsi que des plats et des desserts pour vos déjeuner dans
-                                les Weppes et ses alentours livré à domicile
+                                salé ainsi que des plats et des desserts pour vos déjeuners, livrées dans les Weppes et ses alentours.
                             </p>
                             <span className='cont-buttons'><button className='button-home'><a className="vinculo-commander-home" href='https://papyblank.byclickeat.fr/store/entrypoint'>COMMANDER</a></button></span>
                         </div>
@@ -176,20 +186,20 @@ function Home() {
                 <section className='events-section'>
                     <div className='container-event-home'>
                         <div className='text-concept-home'>
-                            <h1 className='titre-event'>Personnalisez vos événements...</h1>
-                            <p className='paragraphe-event-home'>
+                            <h1 className='titre-event titre-descrp'>Personnalisez vos événements...</h1>
+                            <p className='paragraphe-event-home para-home'>
                                 Nous pouvons vous accompagner dans vos événements
                                 familiaux <span className='event-negrita'>(anniversaires, communions, baptêmes, rebonds de
-                                mariage, vin d’honneur)</span> afin de vous préparer un buffet
+                                    mariage, vin d’honneur)</span> afin de vous préparer un buffet
                                 personnalisé, mais aussi dans vos événements professionnels
                                 <span className='event-negrita'>(livraison de petit-déjeuner sucré/salé, buffet brunch, plateaux
-                                repas, départ en retraite).</span><br /><br /> Nos prestations sont réalisées selon
+                                    repas, départ en retraite).</span><br /><br /> Nos prestations sont réalisées selon
                                 vos envies, avec des produits locaux, des fruits et légumes
                                 cultivés à la ferme et de la cuisine faite maison.
                             </p>
                             <span className='cont-buttons'>
                                 <button className='button-event'>
-                                <Link to='/contact' className='link-event'>CONTACTEZ-NOUS</Link>
+                                    <Link to='/contact' className='link-event'>CONTACTEZ-NOUS</Link>
                                 </button>
                             </span>
                         </div>

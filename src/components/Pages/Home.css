@@ -1,51 +1,69 @@
 .homepage-content {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: 1fr;
 
 }
+
 /*-------------------------*/
-/* SKEW COUNTER CLOCKWISE  */
+/* FONT SIZE H2 ET P  */
 /*-------------------------*/
 
+.titre-descrp {
+    font-size: 3vw;
+}
+
+.para-home {
+    font-size: 2vw;
+    line-height: 1.5;
+}
+
+/*-------------------------*/
+/*Section DIvider*/
+/*-------------------------*/
 
 .section-divider {
-    border: 15px solid var(--verte-claire);
-    border-style: solid hidden solid hidden;
-    background-color: var(--marron-fonce);
-    height: 15px;
+    border: 12px solid var(--verte-claire);
+    width: auto;
+    margin: 0;
+    padding: 0;
 }
 
-.section {
-    padding-left: 6%;
-    padding-right: 6%;
+.section-divider2 {
+    border: 15px solid var(--marron-fonce);
+    width: auto;
+    margin: 0;
+    padding: 0;
 }
-
-
-
 
 .home-description,
 .home-histoire {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 50% 50%;
     align-items: center;
     justify-content: center;
-    width: auto;
-    height: 100vh;
-    padding: 0 6%;
-    gap: 3%;
+    height: 90vh;
+    width: 100%;
     margin: 0;
-  
+    text-align: center;
 }
-.titre-descr{
+
+.home-text {
+    padding: 0 0 0 6%;
+}
+
+.home-text-histoire {
+    padding: 0 10% 0 0;
+}
+
+/*-------------------------*/
+/* COLOR H2, P and BACKGROUND S1 and S */
+/*-------------------------*/
+.titre-descr {
     color: var(--verte-claire);
 }
-.titre-hist{
+
+.titre-hist {
     color: var(--marron-fonce);
-}
-
-
-.home-description {
-    padding-bottom: 0%;
 }
 
 .home-description {
@@ -56,35 +74,23 @@
     background-color: var(--verte-claire);
 }
 
-.home-text {
-    flex: 1;
-    text-align: center;
-}
-
-.titre-descrp {
-    text-align: center;
-    margin-bottom: 50px;
-    font-size: 2.5rem;
-    
-}
-.para-descr{
+.para-descr {
     color: var(--beige-claire);
 }
-.para-hist{
+
+.para-hist {
     color: var(--verte-fonce);
-}
-
-
-.paragraphe-home {
-    text-align: center;
-    line-height: 1.5;
-    font-size: 1.5rem;
-    
 }
 
 .paragraphe-home.mots {
     color: var(--beige-claire);
 }
+
+
+/*-------------------------*/
+/* Images et animation S1 et S2 */
+/*-------------------------*/
+
 .images-sections {
     view-timeline-name: --image;
     view-timeline-axis: block;
@@ -97,34 +103,139 @@
 }
 
 .images-home {
-    flex: 1;
-    text-align: center;
-    
-
-}
-.imagen-home-descr{
-    border: 5px var(--verte-claire);
-    border-style: solid;
-}
-.imagen-hist{
-    border: 5px var(--beige-claire);
-    border-style: solid;
+    display: flex;
 }
 
-.images-home img {
-    max-width: 100%;
-    height: fit-content;
-    display: block;
-    margin: 0 0;
+.descr-img,
+.histoire-img {
+    padding-left: 15%;
 }
 
 .imagen-home-descr {
-    height: auto;
+    border: 5px solid var(--verte-claire);
 }
 
-.images-home.histoire img {
-    height: auto;
-    overflow: hidden;
+.imagen-hist {
+    border: 5px solid var(--beige-claire);
+}
+
+.images-sections {
+    height: fit-content;
+}
+
+.descr-img {
+    width: 80%;
+}
+
+/*-------------------------*/
+/* Buttons Section concept*/
+/*-------------------------*/
+
+.buttom-concept-home-intro {
+
+    font-family: 'KrabulerFont';
+    font-weight: bold;
+    font-size: 1.5rem;
+    cursor: pointer;
+    border: none;
+    width: 180px;
+    height: 70px;
+    padding: 1rem .5rem;
+
+    --b: 3px;
+    /* border thickness */
+    --s: .15em;
+    /* size of the corner */
+    --cv: var(--verte-claire);
+
+    padding: calc(.05em + var(--s)) calc(.3em + var(--s));
+    color: var(--cv);
+    --_p: var(--s);
+    background:
+        conic-gradient(from 90deg at var(--b) var(--b), #0000 90deg, var(--cv) 0) var(--_p) var(--_p)/calc(100% - var(--b) - 2*var(--_p)) calc(100% - var(--b) - 2*var(--_p));
+    transition: .3s linear, color 0s, background-color 0s;
+    outline: var(--b) solid #0000;
+    outline-offset: .2em;
+}
+
+.buttom-concept-home-intro:hover,
+.buttom-concept-home-intro:focus-visible {
+    --_p: 0px;
+    outline-color: var(--cv);
+    outline-offset: .05em;
+    background-color: var(--verte-claire);
+}
+
+.buttom-concept-home-intro:hover .link-concept-intro {
+    color: var(--verte-fonce);
+}
+
+.buttom-concept-home-intro:active {
+    background: var(--beige-claire);
+    color: #fff;
+}
+
+.link-concept-intro {
+    color: var(--verte-claire);
+    text-decoration: none;
+}
+
+/*-------------------------*/
+/* Buttons Section histoire*/
+/*-------------------------*/
+
+.buttom-laferme-home {
+    font-family: 'KrabulerFont';
+    font-weight: bold;
+    font-size: 1.5rem;
+    cursor: pointer;
+    border: none;
+    width: 180px;
+    height: 70px;
+    padding: 1rem .5rem;
+
+    --b: 3px;
+    /* border thickness */
+    --s: .15em;
+    /* size of the corner */
+    --cv: var(--marron-fonce);
+
+    padding: calc(.05em + var(--s)) calc(.3em + var(--s));
+    color: var(--cv);
+    --_p: var(--s);
+    background:
+        conic-gradient(from 90deg at var(--b) var(--b), #0000 90deg, var(--cv) 0) var(--_p) var(--_p)/calc(100% - var(--b) - 2*var(--_p)) calc(100% - var(--b) - 2*var(--_p));
+    transition: .3s linear, color 0s, background-color 0s;
+    outline: var(--b) solid #0000;
+    outline-offset: .2em;
+}
+
+.buttom-laferme-home:hover,
+.buttom-laferme-home:focus-visible {
+    --_p: 0px;
+    outline-color: var(--cv);
+    outline-offset: .05em;
+    background-color: var(--marron-fonce);
+    color: var(--beige-claire);
+}
+
+.buttom-laferme-home:hover .link-ferme-intro {
+    color: var(--beige-claire);
+}
+
+.buttom-laferme-home:active {
+    background: var(--beige-claire);
+
+}
+
+.buttom-laferme-home:active .link-ferme-intro {
+
+    color: var(--marron-fonce);
+}
+
+.link-ferme-intro {
+    color: var(--marron-fonce);
+    text-decoration: none;
 }
 
 
@@ -162,7 +273,7 @@
 }
 
 .home-text-createur {
-    padding: 0 25%;
+    padding: 0 10%;
     position: relative;
     z-index: 2;
     text-align: center;
@@ -170,10 +281,24 @@
 }
 
 .mots {
-    width: 90%;
+    width: 100%;
+    font-size: 2.5vw;
 }
 
-/*  ----- Bottom ---------*/
+.signature-chef {
+    text-align: right;
+    width: 80%;
+}
+
+.foto-chef {
+    border-radius: 50%;
+    width: 20%;
+
+}
+
+/*-------------------------*/
+/* Section Photos concept et brunchs*/
+/*-------------------------*/
 .container-concept-home {
     display: grid;
     grid-template-columns: .5fr 1.5fr;
@@ -184,18 +309,6 @@
     display: grid;
     grid-template-columns: 1.5fr .5fr;
     padding: 5% 0;
-}
-
-.signature-chef {
-    text-align: right;
-    width: 80%;
-
-}
-
-.foto-chef {
-    border-radius: 50%;
-    width: 20%;
-
 }
 
 .home-bottom {
@@ -210,13 +323,11 @@
 
 .text-concept-home,
 .text-brunch-home {
-    display: flex;
-    flex-direction: column;
     justify-content: center;
 }
 
 .paragraphe-bottom-home.un {
-    font-size: 1.5rem;
+    font-size: 2vw;
     text-align: right;
     width: 80%;
     color: var(--marron-fonce);
@@ -224,14 +335,14 @@
 }
 
 .paragraphe-bottom-home.deux {
-    font-size: 1.5rem;
+    font-size: 2vw;
     text-align: left;
     width: 80%;
     padding-left: 20%;
     color: var(--marron-fonce);
 }
 
-hr {
+.ligne-separatoire {
     border: none;
     border-top: 4px dotted var(--marron-fonce);
     /* Color y grosor de la línea */
@@ -256,34 +367,37 @@ hr {
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%; /* Asegura que cubra toda la sección */
+    width: 100%;
+    /* Asegura que cubra toda la sección */
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.7); /* Usa rgba para opacidad */
+    background-color: rgba(0, 0, 0, 0.7);
+    /* Usa rgba para opacidad */
     z-index: 1;
 }
 
 .container-event-home {
     position: relative;
-    z-index: 2; /* Asegura que el contenido esté por encima del pseudo-elemento */
+    z-index: 2;
+    /* Asegura que el contenido esté por encima del pseudo-elemento */
 }
 
 .paragraphe-event-home {
     text-align: center;
     padding: 0% 10% 2% 10%;
-    font-size: 1.5rem;
+    font-size: 2vw;
     color: var(--beige-claire);
 }
+
 .button-event {
-    --b: 3px;   
-    --s: .15em; 
+    --b: 3px;
+    --s: .15em;
     --c: var(--verte-claire);
-    
+
     padding: calc(.05em + var(--s)) calc(.3em + var(--s));
     color: var(--c);
     --_p: var(--s);
     background:
-      conic-gradient(from 90deg at var(--b) var(--b),#0000 90deg,var(--c) 0)
-      var(--_p) var(--_p)/calc(100% - var(--b) - 2*var(--_p)) calc(100% - var(--b) - 2*var(--_p));
+        conic-gradient(from 90deg at var(--b) var(--b), #0000 90deg, var(--c) 0) var(--_p) var(--_p)/calc(100% - var(--b) - 2*var(--_p)) calc(100% - var(--b) - 2*var(--_p));
     transition: .3s linear, color 0s, background-color 0s;
     outline: var(--b) solid #0000;
     outline-offset: .2em;
@@ -326,14 +440,15 @@ hr {
 .button-event:focus-visible .link-event {
     color: var(--verte-fonce);
 }
-.event-negrita{
+
+.event-negrita {
     color: var(--verte-claire);
     font-style: oblique;
 }
-.titre-event{
+
+.titre-event {
     text-align: center;
     color: var(--verte-claire);
-    font-size: 3rem;
     padding-top: 2%;
 }
 
@@ -493,6 +608,16 @@ hr {
 }
 
 .button-home {
+
+    font-family: 'KrabulerFont';
+    font-weight: bold;
+    font-size: 1.5rem;
+    cursor: pointer;
+    border: none;
+    width: 180px;
+    height: 70px;
+    padding: 1rem .5rem;
+
     --b: 3px;
     /* border thickness */
     --s: .15em;
@@ -522,18 +647,6 @@ hr {
     color: #fff;
 }
 
-.button-home {
-    font-family: 'KrabulerFont';
-    font-weight: bold;
-    font-size: 1.5rem;
-    cursor: pointer;
-    border: none;
-    width: 180px;
-    height: 70px;
-    padding: 1rem .5rem;
-
-}
-
 
 
 @keyframes show {
@@ -552,140 +665,212 @@ hr {
 
 @media screen and (max-width: 960px) {
 
+    /*-------------------------*/
+    /* FONT SIZE H2 ET P  */
+    /*-------------------------*/
+
+    .titre-descrp {
+        font-size: 4vw;
+    }
+
+    .para-home {
+        font-size: 3vw;
+    }
+
+    /*-------------------------*/
+    /* SECTION 1 ET 2  */
+    /*-------------------------*/
     .home-description,
     .home-histoire {
-        display: flex;
-        flex-direction: column;
-        height: 50%;
-        padding: 40px 0 40px 0;
-    }
-
-    .home-text {
-        margin-top: 0;
-        margin-bottom: 0;
-        margin-right: 20px;
-        padding-bottom: 30px;
-        height: 10px;
-        padding-top: 10px;
-    }
-
-    .home-histoire {
-        padding-top: 30px;
-    }
-
-    .home-text-histoire {
-        padding: 0 10%;
+        grid-template-columns: 100%;
+        grid-template-rows: auto auto;
+        height: auto;
+        padding: 5% 0;
         margin: 0;
     }
 
-    .images-home {
-        margin-top: 20px;
+    .home-text-histoire {
+        grid-row: 1;
     }
 
+    .home-text,
+    .home-text-histoire {
+        padding: 5%;
+    }
+
+    /*-------------------------*/
+    /* Images et animation S1 et S2 */
+    /*-------------------------*/
+
+    .descr-img,
     .histoire-img {
-        margin-top: 30px;
-        padding-top: 20px;
+        padding: 0;
+        margin: 0;
+        justify-content: center;
+    }
+
+    .descr-img {
+        width: 100%;
+        height: auto;
+    }
+
+    .imagen-home-descr,
+    .imagen-hist {
+        width: 40%;
+    }
+    .descr-img, .histoire-img {
+        padding-bottom: 5%;
+    }
+
+    /*-------------------------*/
+    /* Section Mots Createur*/
+    /*-------------------------*/
+    .home-mots-createur {
+        height: 80vh;
     }
 
     .home-text-createur {
-        padding: 0 5%;
+        padding: 0 10%;
     }
 
-    .section-divider {
-        height: 200px;
+    .mots {
+        font-size: 3.5vw;
     }
 
-    .skew-cc {
-        background: linear-gradient(to right bottom, var(--verte-claire) 49%, var(--beige-claire) 50%), linear-gradient(-30deg, #ffffff 16px, #000 0);
-    }
-
-    .skew-c {
-        background: linear-gradient(to left bottom, var(--verte-claire) 49%, var(--beige-claire) 50%);
-    }
-
-    .home-description {
-        padding-bottom: 110px;
-    }
-
+    /*-------------------------*/
+    /* Section Photos concept et brunchs*/
+    /*-------------------------*/
     .container-brunchs-home,
     .container-concept-home {
         grid-template-columns: 1fr;
-        display: grid;
+        padding: 5% 0;
+        margin: 0;
+    }
+
+    .text-brunch-home {
+        grid-row: 1;
     }
 
     .text-concept-home,
     .text-brunch-home {
-        padding-bottom: 5%;
-        justify-content: center;
-        align-items: center;
-        display: flex;
-        flex-direction: column;
+        padding: 5% 0;
     }
 
     .paragraphe-bottom-home.un,
     .paragraphe-bottom-home.deux {
         text-align: center;
-        padding: 10px;
+        width: 100%;
+        padding: 0 0 5% 0;
+        margin: 0;
+        font-size: 3vw;
     }
 
+    /*----------------------------------*/
+    /*-------- Galleries Section -------*/
+    /*----------------------------------*/
     .thumbs {
         grid-template-columns: 1fr 1fr;
         height: auto;
-        max-width: auto;
+        max-width: 80%;
+        gap: 10px;
 
         >a {
             height: auto;
 
+            img {
+                min-width: auto;
+                min-height: auto;
+                max-width: auto;
+                max-height: auto;
+            }
         }
+
     }
 }
 
 @media screen and (max-width: 750px) {
+    /*-------------------------*/
+    /* FONT SIZE H2 ET P  */
+    /*-------------------------*/
 
-    .home-bottom {
-        grid-template-columns: 100%;
-        height: auto;
-
+    .titre-descrp {
+        font-size: 8vw;
     }
 
-    .cont-buttons {
-        margin-bottom: 10%;
+    .para-home {
+        font-size: 6vw;
     }
 
-    .foto-chef {
-
-        width: 35%;
-
+    /*-------------------------*/
+    /* Images et animation S1 et S2 */
+    /*-------------------------*/
+    .imagen-home-descr,
+    .imagen-hist {
+        width: 80%;
+    }
+    .descr-img, .histoire-img {
+        padding-bottom: 10%;
     }
 
-    .text-brunch-home {
-        margin-top: 10%;
-    }
-
-    .home-mots-createur {
-        padding-top: 20%;
-        padding-bottom: 20%;
-        height: auto;
-    }
-
-    .container-concept-home {
-        padding-bottom: 20%;
-    }
-
-    .container-brunchs-home {
-        padding-top: 20%;
-    }
-
-    .titres-bottom.un {
-        padding-right: 40px;
-    }
-
-    .titres-bottom.deux {
-        padding-left: 40px;
-    }
+    /*-------------------------*/
+    /*Section DIvider*/
+    /*-------------------------*/
 
     .section-divider {
-        margin-top: -40%;
+        border: 12px solid var(--verte-claire);
+        border-style: hidden hidden solid hidden;
+    }
+
+    .section-divider2 {
+        border: 15px var(--marron-fonce);
+        border-style: solid hidden hidden hidden;
+    }
+    /*-------------------------*/
+    /* Section Mots Createur*/
+    /*-------------------------*/
+    .home-mots-createur {
+        height: 60vh;
+    }
+
+    .home-text-createur {
+        padding: 0 10%;
+    }
+
+    .mots {
+        font-size: 6vw;
+    }
+    .foto-chef {
+        width: 35%;
+    }
+
+    .paragraphe-bottom-home.un,
+    .paragraphe-bottom-home.deux {
+        
+        font-size: 6vw;
+    }
+
+    
+
+   /*----------------------------------*/
+    /*-------- Galleries Section -------*/
+    /*----------------------------------*/
+    .thumbs {
+        grid-template-columns: 1fr 1fr;
+        height: auto;
+        max-width: 100%;
+        gap: 0;
+
+        >a {
+            height: auto;
+
+            img {
+                min-width: auto;
+                min-height: auto;
+                max-width: auto;
+                max-height: auto;
+            }
+        }
+
     }
 
     .lightbox {
@@ -702,5 +887,10 @@ hr {
 
             }
         }
+    }
+
+    .titre-event{
+        padding: 0 5%;
+        font-size: 8vw;
     }
 }

@@ -24,7 +24,7 @@ function Footer() {
           </a>
         </div>
         <div className='footer-reseaux'>
-          <h3>Suivez nous!</h3>
+          <h3>Suivez-nous!</h3>
           <a href='https://www.facebook.com/profile.php?id=100093728487557'><FaFacebook className='icons-footer-reseaux' /></a>
           <a href='https://www.instagram.com/papyblank?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=='><FaInstagram className='icons-footer-reseaux' /></a>
           <a href='mailto:papyblank@gmail.com'><FaEnvelope className='icons-footer-reseaux' /></a>
@@ -36,8 +36,8 @@ function Footer() {
         </div>
       </div>
       <div className='footer-politiques'>
-      <Link to="/MentionLegales">Mention légales</Link>
-      <Link to="/PolitiquesDeConfidentialite">Politique de confidentialité</Link>
+      <Link to="/MentionLegales">Mentions légales</Link>
+      <Link to="/PolitiquesDeConfidentialite">Politiques de confidentialité</Link>
       </div>
       <div className='copyright'>
         <p>&copy;Tous droits réserves Papy Blank {currentYear}</p>

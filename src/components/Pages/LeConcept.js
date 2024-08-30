@@ -46,7 +46,7 @@ const LeConcept = () => {
           <div className='descr-sale'>
             <h2 className='titres'>Le salé</h2>
             <p className='paragraphe-sale paragraphes'>
-              Des plats simples mais surtout savoUreux mettant en avants les légumes de la ferme.
+              Des plats simples mais surtout savoureux mettant en avants les légumes de la ferme.
               Des plats incontournables pour vos brunchs ou vos déjeuners avec un seul objectif: <span className='negrita-text-sucre'>le goût.</span>
             </p>
             <button className='button-concept'><a className='vinculo-commander-concept' href='https://papyblank.byclickeat.fr/store/entrypoint'>COMMANDER</a></button>
@@ -80,7 +80,7 @@ const LeConcept = () => {
           <h2 className='titres'>LES PRODUITS</h2>
           <p className='paragraphe-produits paragraphes'>
             Les fuits et légumes cultivés dans la ferme familliale à Erquinghem-le-sec. Les autres produits proviennent
-            de fermes et de pscicultures de la région. Par exemple le porc provient de la ferme du Crussobeau,
+            de fermes et de pisciculture de la région. Par exemple le porc provient de la ferme du Crussobeau,
             la truite de la pisciculture d'Anzin, la farine du moulin des Weppes.
           </p>
         </div>

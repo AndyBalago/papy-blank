@@ -6,7 +6,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 1.2rem;
+  font-size: 1.5vw;
   position: fixed; /* Cambiado de sticky a fixed */
   top: 0;
   left: 0;
@@ -46,8 +46,8 @@
 }
 
 .navbar-logo img {
-  height: 80px;
-  width: auto;
+  height: 10vh;
+  width: auto;  
 }
 
 .menu-responsive {
@@ -97,6 +97,7 @@
 .nav-links:hover {
   border-bottom: 4px solid var(--marron-fonce);
   transition: all 0.2s ease-out;
+
 }
 
 .dtype:hover {
@@ -152,6 +153,7 @@
     width: 100%;
     display: inline-flex;
     justify-content: center;
+    font-size: 3vw;
   }
 
   .nav-links:hover {
@@ -164,8 +166,6 @@
     position: absolute;
     top: 0;
     left: 10%;
-    height: 0;
-    width: auto;
   }
 
   .menu-icon {
@@ -185,7 +185,6 @@
     border-radius: 4px;
     width: 80%;
     text-decoration: none;
-    font-size: 1.5rem;
     background-color: transparent;
     color: #fff;
     padding: 14px 20px;
@@ -212,13 +211,14 @@
 
   .mobile-shop-icon {
     display: flex; /* Muestra solo el icono en pantallas pequeñas */
-    font-size: 50px;
-    right: 25%;
+    font-size: 30px;
+    right: 20%;
+    top: 20%;
     position: absolute;
   }
   .shop-icono{
-    color: var(--marron-fonce);
-    filter: drop-shadow(0 0 30px var(--beige-claire));
+    color: var(--verte-fonce);
+    
   }
   .navbar-logo{
     margin-left: -5%;

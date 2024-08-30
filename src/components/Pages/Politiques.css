@@ -1,0 +1,23 @@
+.container-politiques{
+    padding: 5%;
+    background-color: var(--beige-claire);
+}
+
+.container-politiques h1{
+    color: var(--verte-fonce);
+    text-align: center;
+    font-size: 3vw;
+}
+
+.container-politiques h2, .container-politiques h3{
+    color: var(--verte-fonce);
+}
+.container-politiques p{
+    color: var(--marron-fonce);
+}
+.container-politiques h4{
+    text-align: center;
+    text-decoration: underline;
+    font-style: oblique;
+    color: var(--marron-fonce);
+}

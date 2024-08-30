@@ -1,0 +1,17 @@
+.container-mentions-legales{
+    padding: 5%;
+    background-color: var(--beige-claire);
+}
+
+.container-mentions-legales h1{
+    color: var(--verte-fonce);
+    text-align: center;
+    font-size: 3vw;
+}
+
+.container-mentions-legales h2{
+    color: var(--verte-fonce);
+}
+.container-mentions-legales p{
+    color: var(--marron-fonce);
+}
