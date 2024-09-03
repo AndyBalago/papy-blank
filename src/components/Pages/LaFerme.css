@@ -3,13 +3,14 @@
     flex-direction: column;
     background-color: var(--verte-claire);
 }
+
 .titres-ferme {
     text-align: center;
-    font-size: 3rem;
+    font-size: 3vw;
 }
 
-.section-ferme{
-    
+.section-ferme {
+
     width: auto;
     display: flex;
     flex-direction: column;
@@ -17,6 +18,7 @@
     align-items: center;
     padding: 0 5%;
 }
+
 /*------  Section Description Ferme   ----*/
 .ferme-cont {
     display: flex;
@@ -29,15 +31,15 @@
     background-size: cover;
     background-position: center;
     position: relative;
-    overflow: hidden; 
-    background-attachment: fixed; 
+    overflow: hidden;
+    background-attachment: fixed;
 }
 
-.titre-descr-ferme{
+.titre-descr-ferme {
     margin-top: -1%;
     color: var(--verte-claire);
     padding-bottom: 2%;
-    font-size: 4rem;
+    font-size: 4vw;
 }
 
 .descr-ferme-div {
@@ -51,8 +53,8 @@
 
 .paragraphe-descr-ferme {
     margin: 0;
-    font-size: 1.5rem;
-    text-align:  center;
+    font-size: 2vw;
+    text-align: center;
     color: var(--beige-claire);
     width: 80%;
 }
@@ -71,59 +73,116 @@
     border: 5px solid var(--verte-claire);
     border-radius: 2rem;
 }
+
 /*-----------------------------*/
 /*---Section Histoire Ferme----*/
 /*-----------------------------*/
-.histoire-cont{
+.histoire-cont {
     background-color: var(--beige-claire);
     height: 100vh;
+    width: auto;
+    overflow: hidden;
+    padding: 2%;
 }
-.titre-histoire-ferme{
+
+.titre-histoire-ferme {
     color: var(--verte-fonce);
 }
-.histoire-paragraphe{
+
+.histoire-paragraphe {
     color: var(--marron-fonce);
-    font-size: 1.5rem;
-    text-align: center;
+    font-size: 2vw;
+    text-align: justify;
     letter-spacing: 1px;
+    padding-right: 5%;
+    position: relative;
 }
+
+.ancienne-ferme {
+    float: left;
+    width: 18%;
+    /* Ajusta el ancho de la imagen al 50% */
+    height: auto;
+    /* Mantiene la proporción original de la imagen */
+    display: block;
+    margin: 1%;
+    border: 5px solid var(--verte-claire);
+}
+
+.photo-ferme {
+    float: right;
+    width: 18%;
+    /* Ajusta el ancho de la imagen al 50% */
+    height: auto;
+    /* Mantiene la proporción original de la imagen */
+    display: block;
+    margin: 1%;
+    border: 5px solid var(--verte-claire);
+
+}
+
 /*--------------------------*/
 /*-----Section Legumes------*/
 /*--------------------------*/
-.legumes-cont, .fruits-cont{
-    height: 50vh;
+.legumes-cont,
+.fruits-cont {
+    height: fit-content;
+    padding: 5% 5%;
 }
-.titre-legumes-ferme{
+
+.titre-legumes-ferme {
     color: var(--marron-fonce);
 }
+
 .legumes-paragraphe {
     color: var(--verte-fonce);
-    font-size: 1.5rem;
-    text-align: center;
-    letter-spacing: 1px;
-}
-/*--------------------------*/
-/*-----Section Fruits------*/
-/*--------------------------*/
-.fruits-cont{
-    background-color: var(--marron-fonce);
-}
-.titre-fruits-ferme{
-    color: var(--verte-claire);
-}
-.fruits-paragraphe{
-    color: var(--beige-claire);
-    font-size: 1.5rem;
+    font-size: 2vw;
     text-align: center;
     letter-spacing: 1px;
 }
 
-@media screen and (max-width: 960px){
+/*--------------------------*/
+/*-----Section Fruits------*/
+/*--------------------------*/
+.fruits-cont {
+    background-color: var(--marron-fonce);
+}
+
+.titre-fruits-ferme {
+    color: var(--verte-claire);
+}
+
+.fruits-paragraphe {
+    color: var(--beige-claire);
+    font-size: 2vw;
+    text-align: center;
+    letter-spacing: 1px;
+}
+
+/*--------------------------*/
+/*-----Gallery------*/
+/*--------------------------*/
+.gallery-ferme {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    width: 80%;
+    gap: 15px;
+    justify-items: center;
+}
+
+.gallery-ferme img {
+    width: 100%;
+    height: fit-content;
+}
+
+
+@media screen and (max-width: 960px) {
     .ferme-cont {
         height: auto;
         padding-top: 15%;
         padding-bottom: 20%;
     }
+
     .descr-ferme-div {
         grid-template-columns: 1fr;
         gap: 0;
@@ -132,39 +191,117 @@
         padding: 0;
         gap: 20%;
     }
+
     .paragraphe-descr-ferme {
         width: 100%;
     }
-    .legumes-cont, .fruits-cont, .histoire-cont{
+
+    .legumes-cont,
+    .fruits-cont,
+    .histoire-cont {
         height: auto;
         padding: 5% 5%;
         padding-bottom: 10%;
     }
-      .descr-ferme-div {
+
+    .descr-ferme-div {
         gap: 10%;
     }
+
     .map-cont {
-     
+
+        width: 50%;
+        justify-self: center;
         height: 300px;
-       
-    
+
     }
+
+    .titre-histoire-ferme,
+    .titre-legumes-ferme,
+    .titre-fruits-ferme {
+        font-size: 5vw;
+    }
+
+    .titre-descr-ferme {
+        font-size: 5vw;
+    }
+
+    .para-gen-ferme {
+        font-size: 3vw;
+    }
+
+    .paragraphe-descr-ferme {
+        font-size: 4vw;
+    }
+
+    .photo-ferme,
+    .ancienne-ferme {
+        width: 30%;
+    }
+
+    .legumes-paragraphe,
+    .fruits-paragraphe {
+        padding: 0 3%;
+    }
+
 }
-@media screen and (max-width: 750px){
-   
-    .legumes-cont, .fruits-cont, .histoire-cont{
+
+@media screen and (max-width: 750px) {
+    .titres-ferme {
+        font-size: 10vw;
+    }
+
+    .paragraphe-descr-ferme {
+        font-size: 7vw;
+    }
+
+    .legumes-cont,
+    .fruits-cont,
+    .histoire-cont {
         height: auto;
         padding: 5% 5%;
         padding-bottom: 10%;
     }
-  
+
     .ferme-cont {
         padding-top: 30%;
         padding-bottom: 20%;
         height: auto;
     }
-    
+
     .map-cont {
-        height: 300px;
+        width: 80%;
+
+    }
+
+    .titre-histoire-ferme,
+    .titre-legumes-ferme,
+    .titre-fruits-ferme {
+        font-size: 8vw;
+    }
+
+    .para-gen-ferme {
+        font-size: 7vw;
+    }
+
+    .photo-ferme,
+    .ancienne-ferme {
+        width: 95%;
+    }
+
+    /*--------------------------*/
+    /*-----Gallery------*/
+    /*--------------------------*/
+    .gallery-ferme {
+        display: grid;
+        grid-template-columns: 1fr;
+        width: 80%;
+        gap: 15px;
+        justify-items: center;
+    }
+
+    .gallery-ferme img {
+        width: 100%;
+        height: fit-content;
     }
 }

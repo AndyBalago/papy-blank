@@ -18,16 +18,18 @@ function Footer() {
       <div className='infos-footer-container'>
         <div className='footer-infos-essentiels'>
           <h3>Adresse</h3>
-          <a href='https://g.co/kgs/gKsu4jN' target="_blank" rel="noreferrer">
-          <p>368 Rue de l'Église,</p>
-          <p>59320 Erquinghem-le-Sec</p>
+          <a className='maps-adresse' href='https://g.co/kgs/gKsu4jN' target="_blank" rel="noreferrer">
+            <p>368 Rue de l'Église,</p>
+            <p>59320 Erquinghem-le-Sec</p>
           </a>
         </div>
         <div className='footer-reseaux'>
           <h3>Suivez-nous!</h3>
-          <a href='https://www.facebook.com/profile.php?id=100093728487557'><FaFacebook className='icons-footer-reseaux' /></a>
-          <a href='https://www.instagram.com/papyblank?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=='><FaInstagram className='icons-footer-reseaux' /></a>
-          <a href='mailto:papyblank@gmail.com'><FaEnvelope className='icons-footer-reseaux' /></a>
+          <div className='cont-reseaux'>
+            <a href='https://www.facebook.com/profile.php?id=100093728487557'><FaFacebook className='icons-footer-reseaux' /></a>
+            <a href='https://www.instagram.com/papyblank?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=='><FaInstagram className='icons-footer-reseaux' /></a>
+            <a href='mailto:papyblank@gmail.com'><FaEnvelope className='icons-footer-reseaux' /></a>
+          </div>
         </div>
         <div className='footer-reservation'>
           <h3>Contact</h3>
@@ -36,8 +38,8 @@ function Footer() {
         </div>
       </div>
       <div className='footer-politiques'>
-      <Link to="/MentionLegales">Mentions légales</Link>
-      <Link to="/PolitiquesDeConfidentialite">Politiques de confidentialité</Link>
+        <Link to="/MentionLegales">Mentions légales</Link>
+        <Link to="/PolitiquesDeConfidentialite">Politiques de confidentialité</Link>
       </div>
       <div className='copyright'>
         <p>&copy;Tous droits réserves Papy Blank {currentYear}</p>

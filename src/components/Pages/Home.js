@@ -53,7 +53,7 @@ function Home() {
                 <hr class="section-divider2" />
                 <section className='home-histoire section'>
                     <figure className='images-home histoire-img'>
-                        <img className='images-sections-intro imagen-hist' src='/Images/Ferme-histoire.png' alt='Home' />
+                        <img className='images-sections-intro imagen-hist' src='/Images/ferme-pere.jpg' alt='Home' />
                     </figure>
                     <div className='home-text-histoire'>
                         <h2 className='titre-descrp titre-hist'> PAPY BLANK, UNE HISTOIRE FAMILIALE</h2>

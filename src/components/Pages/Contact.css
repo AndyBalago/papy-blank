@@ -43,8 +43,12 @@ a{
   color: var(--marron-fonce);
   
 }
+.titre-contact-corp h1{
+  font-size: 4vw;
+}
 .titres-block-contact{
   color: var(--verte-fonce);
+  font-size: 2.5vw;
 }
 
 .section-form-contact{
@@ -106,7 +110,10 @@ a{
   }
   .addresse-contact-form{
     color: var(--verte-fonce);
-    font-size: 1.5rem;
+    font-size: 2vw;
+  }
+  .infos-coordones-contact p{
+    font-size: 1.5vw;
   }
   .infos-coordones-contact p{
     color: var(--marron-fonce);
@@ -130,7 +137,11 @@ a{
 
 
   @media screen and (max-width: 960px){
- 
+    
+    .tittre-principal-contact{
+      height: 30vh;
+    }
+
   .tittre-principal-contact h1{
     background-color: var(--verte-fonce);
     width: auto;
@@ -141,6 +152,17 @@ a{
     padding-right: 2%;
     font-size: 2.3rem;
   }
+  .titre-contact-corp h1{
+    font-size: 5vw;
+  }
+  .titres-block-contact, .addresse-contact-form{
+    font-size: 4vw;
+  }
+
+  .infos-coordones-contact p{
+    font-size: 3vw;
+  }
+
 }
 @media screen and (max-width: 750px){
  
@@ -149,6 +171,16 @@ a{
     grid-template-columns: 1fr;
     padding: 5%;
     
+  }
+  .titre-contact-corp h1{
+    font-size: 8vw;
+  }
+  .titres-block-contact, .addresse-contact-form{
+    font-size: 7vw;
+  }
+
+  .infos-coordones-contact p{
+    font-size: 6vw;
   }
 }
   

@@ -1,7 +1,8 @@
 .homepage-content {
-    display: grid;
-    grid-template-columns: 1fr;
-
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    margin: 0;
 }
 
 /*-------------------------*/
@@ -13,8 +14,7 @@
 }
 
 .para-home {
-    font-size: 2vw;
-    line-height: 1.5;
+    font-size: 1.5vw;
 }
 
 /*-------------------------*/
@@ -45,14 +45,24 @@
     width: 100%;
     margin: 0;
     text-align: center;
+    
 }
 
 .home-text {
     padding: 0 0 0 6%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+
 }
 
 .home-text-histoire {
     padding: 0 10% 0 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
 }
 
 /*-------------------------*/
@@ -282,7 +292,7 @@
 
 .mots {
     width: 100%;
-    font-size: 2.5vw;
+    font-size: 2vw;
 }
 
 .signature-chef {
@@ -327,7 +337,7 @@
 }
 
 .paragraphe-bottom-home.un {
-    font-size: 2vw;
+    font-size: 1.5vw;
     text-align: right;
     width: 80%;
     color: var(--marron-fonce);
@@ -335,7 +345,7 @@
 }
 
 .paragraphe-bottom-home.deux {
-    font-size: 2vw;
+    font-size: 1.5vw;
     text-align: left;
     width: 80%;
     padding-left: 20%;
@@ -384,7 +394,7 @@
 .paragraphe-event-home {
     text-align: center;
     padding: 0% 10% 2% 10%;
-    font-size: 2vw;
+    font-size: 1.5vw;
     color: var(--beige-claire);
 }
 

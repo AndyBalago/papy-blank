@@ -26,8 +26,12 @@ a{
     color: var(--marron-fonce);
     font-size: 3vw;
 }
+.cont-reseaux{
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+}
 .icons-footer-reseaux{
-    padding: 20px;
     color: var(--marron-fonce);
 }
 .icons-footer-reseaux:hover, .footer-politiques a:hover, .footer-reservation a:hover{
@@ -73,6 +77,9 @@ a{
     }
     .icons-footer-reseaux{
         padding: 5px;
+    }
+    .cont-reseaux{
+        gap: 10px;
     }
   
 }

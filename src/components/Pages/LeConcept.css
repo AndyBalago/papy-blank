@@ -14,7 +14,7 @@
 }
 
 .titres {
-    font-size: 2.5rem; 
+    font-size: 3vw; 
     color: var(--verte-fonce);
     margin-bottom: 0;
     text-align: center;
@@ -22,7 +22,7 @@
 }
 
 .paragraphes {
-    font-size: 1.5rem;
+    font-size: 1.5vw;
 }
 
 /*--- Description Section---*/
@@ -54,38 +54,38 @@
     height: 100%;
     background: rgba(52, 39, 34, 0.353); 
     z-index: -1;
+   
 }
 
 .description-div {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-bottom: 10px;
     text-align: justify;
+    overflow: hidden;
 }
 .titre-concept{
     text-shadow: 1px 1px 2px var(--verte-claire);
-    font-size: 4rem;
-    margin-top: -5%;
+    font-size: 4vw;
     color: var(--beige-claire);
-   
+    margin: 0;
+    padding: 0;
 }
 .sous-titre-descr {
-    font-size: 2rem;
+    font-size: 2vw;
     color: var(--marron-fonce);
     background-color: var(--verte-claire); 
-    border-radius: 5rem; 
+    border-radius: 5em; 
     padding: 0.5rem;
-    margin-top: 2%;
+    margin: 0   ;
     text-align: center;
 }
 
 .paragraphe-descr {
-    width: 70%;
+    width: 90%;
     text-align: center;
-    margin-top: -10px;
-    font-weight: 100;
     color: var(--beige-claire);
+    font-size: 2vw;
 }
 
 /*--- Vision Section---*/
@@ -93,9 +93,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 80vh;
+    height: 60vh;
     padding-bottom: 50px;
-    clip-path: polygon(0 10%, 100% 0, 100% 90%, 0% 100%);
     z-index: 99;
 }
 
@@ -123,62 +122,110 @@
 }
 
 .sous-titres {
-    font-size: 2rem;
+    font-size: 3vw;
     color: var(--marron-fonce);
     background-color: var(--beige-claire);
 }
 
 .paragraphe-cuisine, .paragraphe-vision {
     color: var(--marron-fonce);
+    font-size: 2vw;
 }
 
 .container-sections h2 {
     padding-bottom: 20px;
 }
+ /*--- Brunch Section (avant sale)---*/
+ .titre-sale, .titre-sucre, .titre-pause{
+    color: var(--verte-claire);
+    padding-top: 10%;
+    
+ }
 
-
-/*--- Sucre Section---*/
-.le-sucre{
-    height: 90vh;
-    background-color: var(--verte-claire);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    clip-path: polygon(0% 0%, 100% 20%, 100% 100%, 0% 90%);
-}
-.div-sucre {
+ .le-sale, .le-sucre, .la-pause{
     display: grid;
     grid-template-columns: 1fr 1fr;
+    height: 100vh;
+    background-color: var(--verte-claire);
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}
+
+.descr-sale {
+    display: flex;
+    flex-direction: column;
+    gap: 5%;
+    padding: 0 5%;
+    margin: 0;
+    align-items: center;
+    
+}
+
+.paragraphe-sale {
+    text-align:justify;
+    color: var(--beige-claire);
+   
+}
+
+.descr-sale, .descr-sucre, .descr-pause{
+    background-color: var(--marron-fonce);
+} 
+/*--- Images 3 sections, ---*/
+.img-container {
+    width: 100%; 
+    height: 100%; 
+    padding: 0;
+    margin: 0;
 }
 
 .img-container img {
-    max-width: 100%;
-    height: fit-content;
-    display: block;
+    width: 100%;  
+    height: 100%; 
+    object-fit: cover;  
 }
 
-.img-sucre {
-    height: auto;
-    width: 100%;
-    align-self: center;
-    margin-left: 0;
+/*--- La pause-dej Section---*/
+.descr-pause {
+    display: flex;
+    flex-direction: column;
+    gap: 5%;
+    padding: 0 5%;
+    margin: 0;
+    align-items: center;
+    justify-content: center;
 }
-
-.img-sucre img {
-    border-radius: 2rem 0 2rem 0;
+.descr-pause{
+    margin: 0;
+    justify-content: first baseline;
+}
+.subrayado{
+    text-decoration: underline;
+}
+.paragraphe-pause {
+    text-align:justify;
+    color: var(--beige-claire);
+    padding-right: 5%;
+    
+}
+/*--- Les dejeneurs Section(avant sale)---*/
+.color-verde{
+    color: var(--verte-claire);
 }
 
 .descr-sucre {
-    display: grid;
-    grid-template-columns: 1fr;
+    display: flex;
+    flex-direction: column;
+    gap: 4%;
+    padding: 0 5%;
+    margin: 0;
+    align-items: center;
+    justify-items: center;
 }
 
 .paragraphe-sucre {
-    font-size: 1.5rem;
-    padding: 0 30px;
-    text-align: center;
-    margin-top: -10px;
-    color: var(--marron-fonce);
+    text-align:justify;
+    color: var(--beige-claire);
 }
 /*----- Button Commander----*/
 .button-concept {
@@ -223,73 +270,6 @@
     color: var(--verte-fonce);
   }
 
-  /*--- Sale Section---*/
-.le-sale{
-    height: 90vh;
-    background-color: var(--verte-claire);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    clip-path: polygon(0% 10%, 100% 0%, 100% 100%, 0% 100%);
-}
-.div-sale {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 50px;
-}
-
-.img-container.img-sale,.img-container.img-sucre{
-    width: 100%;
-    justify-self: center;
-    align-self: center;
-}
-.img-sale {
-    align-self: center;
-    justify-self: right;
-    margin-left: 0;
-    
-}
-
-.img-sale img {
-    border-radius: 0 2rem 0 2rem;
-}
-
-.descr-sale {
-    display: grid;
-    grid-template-columns: 1fr;
-}
-
-.paragraphe-sale {
-    font-size: 1.5rem;
-    padding: 0 30px;
-    text-align: center;
-    margin-top: -10px;
-    color: var(--marron-fonce);
-}
-/*------Transition images-------*/
-@keyframes show {   
-    from{
-        opacity: 0;
-        scale: 25%;
-    }
-
-    to {
-        opacity: 1;
-        scale: 100%;
-    }
-}
-
-.img-container {
-    view-timeline-name: --image;
-    view-timeline-axis: block;
-
-    animation-timeline: --image;
-    animation-name: show;
-
-    animation-range: entry 25% cover 40%;
-    animation-fill-mode: both;
-}
-
 /*------- Les Produits section --------*/
 
 .les-produits{
@@ -318,7 +298,7 @@
 }
 
 .div-produits{
-    width: 50%;
+    width: 80%;
     display: flex;
     flex-direction: column;
     justify-content: center; 
@@ -330,62 +310,105 @@
     border-radius: 1rem;
 }
 .paragraphe-produits{
-    width: 90%;
+    width: 100%;
     text-align: center;
+    font-size: 2vw;
     
 }
 
 @media screen and (max-width: 960px){
-    
- 
-    .description-concept {
-        clip-path: polygon(0 0, 100% 0, 100% 95%, 50% 100%, 0 95%);
+    .titre-concept{
+        font-size: 8vw;
+        margin-bottom: 0;  
     }
-    .le-sucre{
-        height: auto;
-        clip-path: polygon(0% 0%, 100% 5%, 100% 100%, 0% 95%);
-        padding: 70px 0;
+    .titres {
+        font-size: 7vw; 
     }
-    .le-sale{
-        height: auto;
-        clip-path: polygon(0% 5%, 100% 0%, 100% 100%, 0% 100%);
-        padding: 50px 0;
+   
+    .sous-titre-descr{
+        font-size: 6vw;
     }
-    .div-sale {
-        display: grid;
-        grid-template-columns: 1fr;
+    .paragraphe-descr{
+        font-size: 5vw;
+        width: 100%;
+    }
+    .paragraphes {
+        font-size: 4vw;
+    }
+    .sous-titres {
+        font-size: 5vw;
+    }
+    .paragraphe-cuisine, .paragraphe-vision {
        
+        font-size: 4vw;
     }
-    .div-sucre {
-        display: grid;
-        grid-template-columns: 1fr;
-        
-    }
-    .img-sucre, .img-sale {
-        
-        margin: 0;
-    }
-
-
-}
-
-@media screen and (max-width: 750px){
-  
-    .description-concept {
-        clip-path: polygon(0 0, 100% 0, 100% 95%, 50% 100%, 0 95%);
+    /*-------Section Dej, Brunch, Pause----*/
+    .le-sucre, .la-pause, .le-sale{
+        display: flex;
+        flex-direction: column;
         height: auto;
+    }
+    
+    .descr-sale{
         padding-bottom: 5%;
     }
-    .titre-concept{
-        padding-top: 35%;
-        
+    .descr-pause, .descr-sucre, .descr-sale{
+        padding: 0 10% 10% 10%;
+
     }
-    .paragraphe-descr {
-        width: 100%;
+    .img-sale{
+        height: fit-content;
+    }
+    .descr-pause{
+        order: 1;
+    }
+    .img-pause{
+        order: 2;
+    }
+    .descr-pause{
+        padding-bottom: 5%;
     }
     .vision {
         height: auto;
-        clip-path: polygon(0 0%, 100% 0, 100% 100%, 0% 100%);
+        padding: 10% 0;
+    }
+}
+
+@media screen and (max-width: 750px){
+    .titre-concept{
+        font-size: 12vw; 
+    }
+    .sous-titre-descr{
+        font-size: 8vw;
+    }
+    .paragraphe-descr{
+        font-size: 7vw;
+    }
+    .sous-titres {
+        font-size: 8vw;
+    }
+    .description-concept {
+        clip-path: polygon(0 0, 100% 0, 100% 95%, 50% 100%, 0 95%);
+        height: 100vh;
+        padding-bottom: 5%;
+    }
+    .titres {
+        font-size: 10vw; 
+        padding-bottom: 10%;
+    }
+    .paragraphes {
+        font-size: 7vw;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        padding-bottom: 10%;
+    }
+    .para-vision{
+        font-size: 7vw;
+    }
+    .vision {
+        height: auto;
+        padding: 20% 0;
     }
     .wrapper-vision {
         display: grid;
@@ -395,11 +418,9 @@
     }
     .le-sucre{
         height: auto;
-        clip-path: polygon(0% 0%, 100% 2%, 100% 100%, 0% 95%);
     }
     .div-produits{
         width: 80%;
-
     }
    
 

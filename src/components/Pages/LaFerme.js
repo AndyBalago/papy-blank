@@ -2,15 +2,17 @@ import React from 'react'
 import './LaFerme.css'
 
 
+
 const LaFerme = () => {
 
 
   return (
     <div className='la-ferme-container'>
       <section className='ferme-cont section-ferme'>
-        <h2 className='titre-descr-ferme titres-ferme'><span>LA FERME</span></h2>
+        <h1 className='titre-descr-ferme titres-ferme'><span>LA FERME</span></h1>
         <div className='descr-ferme-div'>
           <p className='paragraphe-descr-ferme  ferme-paragraphe'>
+            
             Située à Erquinghem-le-sec à quelques kilomètres de Lille,
             la ferme est en mutation avec pour objectif de passer d'une
             agriculture conventionnelle à une agriculture plus locale,
@@ -23,33 +25,50 @@ const LaFerme = () => {
       </section>
       <section className='histoire-cont section-ferme'>
         <h2 className='titre-histoire-ferme titres-ferme'><span>L'HISTOIRE</span></h2>
-        <p className='histoire-paragraphe ferme-paragraphe'>
+        <p className='histoire-paragraphe para-gen-ferme ferme-paragraphe'>
+        <img className='ancienne-ferme' src='/Images/Ferme-histoire.png'/>
+        
           La ferme est destinée à l'agriculture familiale depuis plus de 4 générations, elle a connu de nombreuses mutations.<br /><br />
-          Au départ, elle était destinée à une agriculture traditionnelle avec pour objectif de nourrir la famille. Dans les années 60,
-          elle est passée d'une agriculture traditionnelle à une agriculture plus conventionnelle spécialisée dans les grandes cultures et à l'élevage porcin.<br /><br />
+          Au départ, elle était destinée à une agriculture traditionnelle avec pour objectif de nourrir la famille. 
+          Dans les années 60,
+          elle est passée d'une agriculture traditionnelle à une agriculture plus conventionnelle spécialisée  dans les grandes cultures et à l'élevage porcin. <img className='photo-ferme' src='/Images/ferme-cultive.jpg'/><br /><br />
+          
           Mon père, qui a repris l'exploitation familiale, a pris conscience de l'impact que peut avoir l'agriculture intensive.
           Il s'est intéressé à la revalorisation des sols afin de remettre du vivant dans les terres.<br /><br />
+          
           Depuis plusieurs années, la ferme se métamorphose. Elle
           développe un système plus vertueux où les produits sont
           cultivés pour être transformés.
+          
+
         </p>
       </section>
       <section className='legumes-cont section-ferme'>
         <h2 className='titre-legumes-ferme titres-ferme'> <span>LES LÉGUMES CULTIVÉS</span></h2>
-        <p className='legumes-paragraphe ferme-paragraphe'>
+        <p className='legumes-paragraphe para-gen-ferme ferme-paragraphe'>
           Une grande variété de légumes sont cultivés en fonction des saisons.
           Des légumes traditionnels connus de tous mais aussi des variétés
           plus anciennes ou plus méconnues Afin de vous faire découvrir de nouvelles saveur.
         </p>
+        <div className='gallery-ferme'>
+          <img src='./Images/Vege1.jpg' alt='Img'/>
+          <img src='./Images/Vege2.jpg' alt='Img'/>
+          <img src='./Images/Vege3.jpg' alt='Img'/>
+        </div>
       </section>
       <section className='fruits-cont section-ferme'>
         <h2 className='titre-fruits-ferme titres-ferme'><span>LES FRUITS CULTIVÉS</span></h2>
-        <p className='fruits-paragraphe ferme-paragraphe'>
+        <p className='fruits-paragraphe para-gen-ferme ferme-paragraphe'>
           Nous avons favorisé des arbres fruitiers et des arbustes de variétés anciennes et biologiques.
           Des
           fruits sans pesticides aux saveurs
           authentiques.
         </p>
+        <div className='gallery-ferme'>
+          <img src='./Images/Fru1.jpg' alt='Img'/>
+          <img src='./Images/Fru2.jpg' alt='Img'/>
+          <img src='./Images/Fru3.jpg' alt='Img'/>
+        </div>
       </section>
 
     </div>
