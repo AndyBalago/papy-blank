@@ -1,3 +1,6 @@
+* {
+    box-sizing: border-box;
+}
 .la-ferme-container {
     display: flex;
     flex-direction: column;
@@ -127,7 +130,8 @@
 .legumes-cont,
 .fruits-cont {
     height: fit-content;
-    padding: 5% 5%;
+    margin: 0 auto; /* Centra los contenedores */
+    padding: 2% 5%; 
 }
 
 .titre-legumes-ferme {
@@ -168,11 +172,15 @@
     width: 80%;
     gap: 15px;
     justify-items: center;
+    max-width: 100%;
+    margin: 0 auto;
 }
 
 .gallery-ferme img {
     width: 100%;
-    height: fit-content;
+    height: auto; /* Ajusta la altura automáticamente */
+    object-fit: cover; /* Ajusta cómo se redimensiona la imagen */
+    max-width: 100%;
 }
 
 
@@ -242,6 +250,9 @@
     .legumes-paragraphe,
     .fruits-paragraphe {
         padding: 0 3%;
+    }
+    .gallery-ferme {
+        grid-template-columns: repeat(2, 1fr); /* 2 columnas para pantallas medianas */
     }
 
 }
