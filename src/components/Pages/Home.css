@@ -45,7 +45,7 @@
     width: 100%;
     margin: 0;
     text-align: center;
-    
+
 }
 
 .home-text {
@@ -151,6 +151,7 @@
     width: 180px;
     height: 70px;
     padding: 1rem .5rem;
+    margin: 1rem;
 
     --b: 3px;
     /* border thickness */
@@ -176,7 +177,7 @@
     background-color: var(--verte-claire);
 }
 
-.buttom-concept-home-intro:hover .link-concept-intro {
+.buttom-concept-home-intro:hover {
     color: var(--verte-fonce);
 }
 
@@ -203,6 +204,7 @@
     width: 180px;
     height: 70px;
     padding: 1rem .5rem;
+    margin: 1rem;
 
     --b: 3px;
     /* border thickness */
@@ -285,7 +287,7 @@
 .home-text-createur {
     padding: 0 10%;
     position: relative;
-    z-index: 2;
+    z-index: 1;
     text-align: center;
     color: white;
 }
@@ -598,10 +600,41 @@
         }
     }
 
+    /* Ajuste para el icono de cierre */
     .close {
-        position: absolute;
-        bottom: 2%;
+        position: relative;
+        top: 40%;
+        /* Alinea con la parte superior */
+        right:0;
+        /* Alinea con la parte derecha */
+        z-index: 10;
+        /* Asegura que esté sobre el contenido de la imagen */
+        font-size: 4vw;
+        /* Tamaño adecuado para el ícono */
+        color: var(--verte-claire);
+        /* Color del icono */
+        cursor: pointer;
+        transition: color 0.3s ease;
+        /* Efecto suave para el hover */
     }
+
+    .close:hover {
+        color: red;
+        /* Color de hover para mejor visibilidad */
+    }
+
+    /* Ajuste para las imágenes en la lightbox */
+    .lightbox .content {
+        position: relative;
+        /* Asegura que el icono de cierre se posicione en relación al contenedor */
+    }
+
+    .lightbox .content img {
+        width: 100%;
+        /* Asegura que la imagen ocupe todo el ancho del contenedor */
+        height: auto;
+    }
+
 }
 
 /*--------- Buttons bottom---------*/
@@ -728,7 +761,9 @@
     .imagen-hist {
         width: 40%;
     }
-    .descr-img, .histoire-img {
+
+    .descr-img,
+    .histoire-img {
         padding-bottom: 5%;
     }
 
@@ -818,7 +853,9 @@
     .imagen-hist {
         width: 80%;
     }
-    .descr-img, .histoire-img {
+
+    .descr-img,
+    .histoire-img {
         padding-bottom: 10%;
     }
 
@@ -835,6 +872,7 @@
         border: 15px var(--marron-fonce);
         border-style: solid hidden hidden hidden;
     }
+
     /*-------------------------*/
     /* Section Mots Createur*/
     /*-------------------------*/
@@ -849,38 +887,34 @@
     .mots {
         font-size: 6vw;
     }
+
     .foto-chef {
         width: 35%;
     }
 
     .paragraphe-bottom-home.un,
     .paragraphe-bottom-home.deux {
-        
+
         font-size: 6vw;
     }
 
-    
 
-   /*----------------------------------*/
+
+    /*----------------------------------*/
     /*-------- Galleries Section -------*/
     /*----------------------------------*/
     .thumbs {
         grid-template-columns: 1fr 1fr;
         height: auto;
         max-width: 100%;
-        gap: 0;
+        gap: 5px; /* Reduce gap between items for smaller screens */
+        padding: 5px;
+    }
 
-        >a {
-            height: auto;
-
-            img {
-                min-width: auto;
-                min-height: auto;
-                max-width: auto;
-                max-height: auto;
-            }
-        }
-
+    .thumbs > a img {
+        width: 100%; /* Make images responsive */
+        height: 100%; /* Ensure height fills container */
+        object-fit: cover; /* Maintain aspect ratio, cropping if necessary */
     }
 
     .lightbox {
@@ -892,14 +926,12 @@
 
         .target {
             .content {
-
                 max-width: calc(100%);
-
             }
         }
     }
 
-    .titre-event{
+    .titre-event {
         padding: 0 5%;
         font-size: 8vw;
     }

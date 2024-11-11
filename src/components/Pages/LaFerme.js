@@ -26,12 +26,12 @@ const LaFerme = () => {
       <section className='histoire-cont section-ferme'>
         <h2 className='titre-histoire-ferme titres-ferme'><span>L'HISTOIRE</span></h2>
         <p className='histoire-paragraphe para-gen-ferme ferme-paragraphe'>
-        <img className='ancienne-ferme' src='/Images/Ferme-histoire.png'/>
+        <img className='ancienne-ferme' src='/Images/Ferme-histoire.png' alt=''/>
         
           La ferme est destinée à l'agriculture familiale depuis plus de 4 générations, elle a connu de nombreuses mutations.<br /><br />
           Au départ, elle était destinée à une agriculture traditionnelle avec pour objectif de nourrir la famille. 
           Dans les années 60,
-          elle est passée d'une agriculture traditionnelle à une agriculture plus conventionnelle spécialisée  dans les grandes cultures et à l'élevage porcin. <img className='photo-ferme' src='/Images/ferme-cultive.jpg'/><br /><br />
+          elle est passée d'une agriculture traditionnelle à une agriculture plus conventionnelle spécialisée  dans les grandes cultures et à l'élevage porcin. <img className='photo-ferme' src='/Images/ferme-cultive.jpg' alt=''/><br /><br />
           
           Mon père, qui a repris l'exploitation familiale, a pris conscience de l'impact que peut avoir l'agriculture intensive.
           Il s'est intéressé à la revalorisation des sols afin de remettre du vivant dans les terres.<br /><br />

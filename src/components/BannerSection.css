@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Grandstander:ital,wght@0,100..900;1,100..900&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Poetsen+One&display=swap');
-
+@import url('https://db.onlinewebfonts.com/c/d45c595a0219ea91eb5851cf0f8f96d1?family=RFKrabuler-Regular');
 .banner-container {
     position: relative;
     width: auto;
@@ -77,6 +77,8 @@
     font-size: 2rem;
 }
 
+
+
 @media screen and (max-width: 960px){
     .banner-container {
         padding-top: 10%;
@@ -94,6 +96,8 @@
     .banner-btns {  
         padding-top: 20%;
     }
+    
+    
 }
 
 @media screen and (max-width: 750px){
@@ -110,9 +114,10 @@
         width: 90%;
         
     }
+    
     .btn-mobile {
         display: block;
         text-decoration: none;
     }
-   
+    
 }

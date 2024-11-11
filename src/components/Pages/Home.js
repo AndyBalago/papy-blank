@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import '../../App';
 import BannerSection from '../BannerSection';
 import './Home.css';
@@ -7,6 +7,7 @@ import { IoMdCloseCircle } from "react-icons/io";
 import { FaArrowAltCircleLeft } from "react-icons/fa";
 import { FaArrowAltCircleRight } from "react-icons/fa";
 import GallerieEvents from '../GallerieEvents';
+import ModalCommander from '../ModalCommander';
 
 function Home() {
     useEffect(() => {
@@ -23,6 +24,15 @@ function Home() {
         };
     }, []);
 
+    const [showModal, setShowModal] = useState(false);
+
+    const openModal = () => {
+        setShowModal(true);
+    };
+
+    const closeModal = () => {
+        setShowModal(false);
+    };
 
     return (
         <div className="homepage">
@@ -40,9 +50,9 @@ function Home() {
                             qualité, offrant un plaisir aussi bien visuel que gustatif.
                         </p>
                         <span className='cont-buttons'>
-                            <button className='buttom-concept-home-intro'>
-                                <Link to='/leconcept' className='link-concept-intro'>LE CONCEPT</Link>
-                            </button>
+
+                            <Link to='/leconcept' className='link-concept-intro'><button className='buttom-concept-home-intro'>LE CONCEPT</button></Link>
+
                         </span>
                     </div>
                     <figure className='images-home descr-img'>
@@ -65,7 +75,7 @@ function Home() {
                             En tant que professionnel de la restauration, je m'occupe de les
                             cuisiner pour les sublimer.
                         </p>
-                        <span className='cont-buttons'><button className='buttom-laferme-home'><Link to='/laferme' className='link-ferme-intro'>LA FERME</Link></button></span>
+                        <span className='cont-buttons'><Link to='/laferme' className='link-ferme-intro'><button className='buttom-laferme-home'>LA FERME</button></Link></span>
                     </div>
                 </section>
                 {/* <div class="skew-c"></div> */}
@@ -92,17 +102,17 @@ function Home() {
                                 légumes récoltés afin de vous proposez une offre
                                 aussi bien sucrée que salée.
                             </p>
-                            <span className='cont-buttons'><button className='button-home buttom-concept-home'><Link to='/leconcept' className='link-concept'>LE CONCEPT</Link></button></span>
+                            <span className='cont-buttons'><Link to='/leconcept' className='link-concept'><button className='button-home buttom-concept-home'>LE CONCEPT</button></Link></span>
                         </div>
                         <div className='gallerie-concept-home thumbs'>
                             <a href="#target1">
-                                <img src='/Images/Cultivo1.jpg' alt='' /></a>
+                                <img src='/Images/Cultivo1.webp' alt='' /></a>
                             <a href="#target2">
-                                <img src='/Images/Cultivo3.jpg' alt='' /></a>
+                                <img src='/Images/Cultivo3.webp' alt='' /></a>
                             <a href="#target3">
-                                <img src='/Images/Fruits1.jpg' alt='' /></a>
+                                <img src='/Images/Fruits1.webp' alt='' /></a>
                             <a href="#target4">
-                                <img src='/Images/Cultivo2.jpg' alt='' /></a>
+                                <img src='/Images/Cultivo2.webp' alt='' /></a>
                         </div>
                         <div class="lightbox">
                             <div className="overlay" onClick={() => window.location.hash = "#!"}></div>
@@ -110,27 +120,27 @@ function Home() {
                                 <span>
                                 </span>
                                 <div class="content">
-                                    <img src='/Images/Cultivo1.jpg' alt='' />
+                                    <img src='/Images/Cultivo1-g.webp' alt='' />
                                 </div>
                                 <a href="#target2" class="nav" title="next"><FaArrowAltCircleRight /></a>
                             </div>
                             <div class="target" id="target2">
                                 <a href="#target1" class="nav" title="previous"><FaArrowAltCircleLeft /></a>
-                                <div class="content"><img src='/Images/Cultivo3.jpg' alt='' /></div>
+                                <div class="content"><img src='/Images/Cultivo3-g.webp' alt='' /></div>
                                 <a href="#target3" class="nav" title="next"><FaArrowAltCircleRight /></a>
                             </div>
                             <div class="target" id="target3">
                                 <a href="#target2" class="nav" title="previous"><FaArrowAltCircleLeft /></a>
-                                <div class="content"><img src='/Images/Fruits1.jpg' alt='' /></div>
+                                <div class="content"><img src='/Images/Fruits1-g.webp' alt='' /></div>
                                 <a href="#target4" class="nav" title="next"><FaArrowAltCircleRight /></a>
                             </div>
                             <div class="target" id="target4">
                                 <a href="#target3" class=" nav" title="previous"><FaArrowAltCircleLeft /></a>
-                                <div class="content"><img src='/Images/Cultivo2.jpg' alt='' /></div>
+                                <div class="content"><img src='/Images/Cultivo2-g.webp' alt='' /></div>
                                 <span>
                                 </span>
                             </div>
-                            <a href="#!" class="close nav"><IoMdCloseCircle /></a>
+                            <a href="#!" class="close nav"><IoMdCloseCircle className='close' /></a>
                         </div>
 
                     </div>
@@ -138,13 +148,13 @@ function Home() {
                     <div className='container-brunchs-home'>
                         <div className='gallerie-brunch-home thumbs'>
                             <a href="#target5">
-                                <img src='/Images/Brunch1.jpeg' alt='' /></a>
+                                <img src='/Images/Brunch1.webp' alt='' /></a>
                             <a href="#target6">
-                                <img src='/Images/BrunchInsta.png' alt='' /></a>
+                                <img src='/Images/BrunchInsta.webp' alt='' /></a>
                             <a href="#target7">
-                                <img src='/Images/Brunch2.jpg' alt='' /></a>
+                                <img src='/Images/Brunch2.webp' alt='' /></a>
                             <a href="#target8">
-                                <img src='/Images/Brunch4.jpeg' alt='' /></a>
+                                <img src='/Images/Brunch4.webp' alt='' /></a>
                         </div>
                         <div class="lightbox">
                             <div className="overlay" onClick={() => window.location.hash = "#!"}></div>
@@ -152,34 +162,38 @@ function Home() {
                                 <span>
                                 </span>
                                 <div class="content">
-                                    <img src='/Images/Brunch1.jpeg' alt='' />
+                                    <img src='/Images/Brunch1-g.webp' alt='' />
                                 </div>
                                 <a href="#target6" class="nav" title="next"><FaArrowAltCircleRight /></a>
                             </div>
                             <div class="target" id="target6">
                                 <a href="#target5" class="nav" title="previous"><FaArrowAltCircleLeft /></a>
-                                <div class="content"><img src='/Images/BrunchInsta.png' alt='' /></div>
+                                <div class="content"><img src='/Images/BrunchInsta-g.webp' alt='' /></div>
                                 <a href="#target7" class="nav" title="next"><FaArrowAltCircleRight /></a>
                             </div>
                             <div class="target" id="target7">
                                 <a href="#target6" class="nav" title="previous"><FaArrowAltCircleLeft /></a>
-                                <div class="content"><img src='/Images/Brunch3.jpeg' alt='' /></div>
+                                <div class="content"><img src='/Images/Brunch2-g.webp' alt='' /></div>
                                 <a href="#target8" class="nav" title="next"><FaArrowAltCircleRight /></a>
                             </div>
                             <div class="target" id="target8">
                                 <a href="#target7" class=" nav" title="previous"><FaArrowAltCircleLeft /></a>
-                                <div class="content"><img src='/Images/Brunch4.jpeg' alt='' /></div>
+                                <div class="content"><img src='/Images/Brunch4-g.webp' alt='' /></div>
                                 <span>
                                 </span>
                             </div>
-                            <a href="#!" class="close nav"><IoMdCloseCircle /></a>
+                            <a href="#!" class="close nav"><IoMdCloseCircle className='close' /></a>
                         </div>
                         <div className='text-brunch-home'>
                             <p className='paragraphe-bottom-home deux para-home'>
                                 Nous vous proposons des box brunch sucré,
                                 salé ainsi que des plats et des desserts pour vos déjeuners, livrées dans les Weppes et ses alentours.
                             </p>
-                            <span className='cont-buttons'><button className='button-home'><a className="vinculo-commander-home" href='https://papyblank.byclickeat.fr/store/entrypoint'>COMMANDER</a></button></span>
+                            <span className='cont-buttons'>
+                                <button className='button-home' onClick={openModal}>COMMANDER</button>
+                            </span>
+                            <ModalCommander showModal={showModal} closeModal={closeModal} />
+
                         </div>
                     </div>
                 </section>
@@ -198,9 +212,9 @@ function Home() {
                                 cultivés à la ferme et de la cuisine faite maison.
                             </p>
                             <span className='cont-buttons'>
-                                <button className='button-event'>
-                                    <Link to='/contact' className='link-event'>CONTACTEZ-NOUS</Link>
-                                </button>
+
+                                <Link to='/contact' className='link-event'><button className='button-event'>CONTACTEZ-NOUS</button></Link>
+
                             </span>
                         </div>
                         <div className='gallery-events'>

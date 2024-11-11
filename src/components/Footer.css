@@ -7,7 +7,7 @@
 }
 .footer-infos-essentiels p, .footer-politiques a, .footer-reservation a{
     color: var(--marron-fonce);
-    font-size: 2vw;
+    font-size: 1.3vw;
 }
 a{
     text-decoration: none;
@@ -24,7 +24,7 @@ a{
 }
 .infos-footer-container h3{
     color: var(--marron-fonce);
-    font-size: 3vw;
+    font-size: 2vw;
 }
 .cont-reseaux{
     display: flex;
@@ -39,7 +39,7 @@ a{
     cursor: pointer;
 }
 .footer-reseaux a{
-    font-size: 5vw;
+    font-size: 4vw;
 }
 
 .footer-politiques{
@@ -105,7 +105,7 @@ a{
         
     }
     .footer-reseaux a{
-        font-size: 15vw;
+        font-size: 20vw;
     }
     .icons-footer-reseaux{
         padding: 15px;
