@@ -203,8 +203,7 @@ function Home() {
                             <h1 className='titre-event titre-descrp'>Personnalisez vos événements...</h1>
                             <p className='paragraphe-event-home para-home'>
                                 Nous pouvons vous accompagner dans vos événements
-                                familiaux <span className='event-negrita'>(anniversaires, communions, baptêmes, rebonds de
-                                    mariage, vin d’honneur)</span> afin de vous préparer un buffet
+                                familiaux, afin de vous préparer un buffet
                                 personnalisé, mais aussi dans vos événements professionnels
                                 <span className='event-negrita'>(livraison de petit-déjeuner sucré/salé, buffet brunch, plateaux
                                     repas, départ en retraite).</span><br /><br /> Nos prestations sont réalisées selon

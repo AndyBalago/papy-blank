@@ -48,7 +48,7 @@ const LaFerme = () => {
         <p className='legumes-paragraphe para-gen-ferme ferme-paragraphe'>
           Une grande variété de légumes sont cultivés en fonction des saisons.
           Des légumes traditionnels connus de tous mais aussi des variétés
-          plus anciennes ou plus méconnues Afin de vous faire découvrir de nouvelles saveur.
+          plus anciennes ou plus méconnues afin de vous faire découvrir de nouvelles saveur.
         </p>
         <div className='gallery-ferme'>
           <img src='./Images/Vege1.jpg' alt='Img'/>
