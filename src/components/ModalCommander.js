@@ -12,18 +12,18 @@ const ModalCommander = ({ showModal, closeModal }) => {
                 <h1>Que voulez-vous manger?</h1>
                 <div className='modal-buttons'>
                     <a
-                        href='https://papyblank.byclickeat.fr/?sid=1faa30bf-6020-4710-8336-b1af5d805a8c&mode=menu'
+                        href='https://papy-blank-dejeuner.c.obypay.com/v-v5.39.7/i-iC92z2LnIo-1/onboarding'
                         target="_blank"
                         rel="noopener noreferrer"
                     >
-                        <button>Déjeuner</button>
+                        <button>Dejeuner</button>
                     </a>
                     <a
-                        href='https://papyblank.byclickeat.fr/?sid=d67e9735-54c6-4966-8b0e-7163e6b34f55&mode=menu'
+                        href='https://papy-blank-brunch.c.obypay.com/v-v5.39.7/i-yYjsf6px2G-1/onboarding'
                         target="_blank"
                         rel="noopener noreferrer"
                     >
-                        <button>Brunch</button>
+                        <button>Traiteur/Brunch</button>
                     </a>
                 </div>
             </div>
