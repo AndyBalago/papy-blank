@@ -1,0 +1,42 @@
+.legal {
+    padding: 5%;
+    padding-top: max(5%, 100px); /* clear the fixed navbar */
+    background-color: var(--beige-claire);
+    color: var(--marron-fonce);
+    line-height: 1.5;
+}
+
+.legal-inner {
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+.legal h1 {
+    color: var(--verte-fonce);
+    text-align: center;
+    font-size: clamp(1.75rem, 3vw, 3rem);
+}
+
+.legal h2,
+.legal h3 {
+    color: var(--verte-fonce);
+}
+
+.legal .legal-subtitle {
+    text-align: center;
+    text-decoration: underline;
+    font-style: oblique;
+}
+
+.legal ul {
+    padding-left: 1.5em;
+}
+
+.legal li + li {
+    margin-top: 0.4em;
+}
+
+.legal a {
+    color: var(--verte-fonce);
+    text-decoration: underline;
+}

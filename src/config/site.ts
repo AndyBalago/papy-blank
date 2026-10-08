@@ -48,3 +48,19 @@ export const navLinks = [
   { href: '/la-ferme', label: 'La Ferme' },
   { href: '/contact', label: 'Contact', accent: true },
 ];
+
+// Legal identity of the publisher (mentions légales, politique de confidentialité).
+export const company = {
+  legalName: 'SARL Papy Blank',
+  capital: '10 000 €',
+  rcs: 'R.C.S. de Lille Métropole 984 555 904',
+  siren: '984 555 904',
+  vat: 'FR70984555904',
+  director: 'Mathieu Blanquart',
+  address: "368 rue de l'Église, 59320 Erquinghem-le-Sec",
+  host: {
+    name: 'Hostinger International Ltd',
+    address: '61 Lordou Vironos Street, 6023 Larnaca, Chypre',
+    contact: 'https://www.hostinger.fr/contact',
+  },
+};
