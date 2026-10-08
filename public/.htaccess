@@ -5,6 +5,13 @@ ErrorDocument 404 /404.html
 <IfModule mod_rewrite.c>
   RewriteEngine On
 
+  # Single canonical host: papyblank.fr -> www.papyblank.fr
+  RewriteCond %{HTTP_HOST} ^papyblank\.fr$ [NC]
+  RewriteRule ^(.*)$ https://www.papyblank.fr/$1 [R=301,L]
+
+  # Old /Contact URL. Case-sensitive on purpose: with [NC] it would also match /contact/ and loop.
+  RewriteRule ^Contact/?$ /contact/ [R=301,L]
+
   # Permanent redirects from the old React (CRA) URLs
   RewriteRule ^Home/?$ / [R=301,L,NC]
   RewriteRule ^LaFerme/?$ /la-ferme/ [R=301,L,NC]
