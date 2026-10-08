@@ -8,8 +8,11 @@ import './Hero.css';
 
 <div class="banner-container">
   <div class="video-overlay"></div>
-  <video class="background-video" autoplay loop muted playsinline>
-    <source src="/videos/intro.mp4" type="video/mp4" />
+  <video class="background-video" autoplay loop muted playsinline poster="/videos/intro-poster.webp" aria-hidden="true">
+    <!-- Browsers use the first source they support; small screens get a lighter 720p file -->
+    <source src="/videos/intro-720.mp4" type="video/mp4" media="(max-width: 750px)" />
+    <source src="/videos/intro-1080.webm" type="video/webm" />
+    <source src="/videos/intro-1080.mp4" type="video/mp4" />
   </video>
 
   <div class="cont-banner-descript">
