@@ -1,0 +1,35 @@
+---
+import { Image } from 'astro:assets';
+import Button from '../ui/Button.astro';
+import Icon from '../ui/Icon.astro';
+import logoBanner from '../../assets/images/logo-banner.png';
+import './Hero.css';
+---
+
+<div class="banner-container">
+  <div class="video-overlay"></div>
+  <video class="background-video" autoplay loop muted playsinline>
+    <source src="/videos/intro.mp4" type="video/mp4" />
+  </video>
+
+  <div class="cont-banner-descript">
+    <h3 class="sous-titre-banner">Bienvenue chez</h3>
+    <h1 class="logo-heading">
+      <Image
+        class="logo_banner_home"
+        src={logoBanner}
+        alt="Papy Blank"
+        widths={[480, 960, logoBanner.width]}
+        sizes="(max-width: 750px) 90vw, (max-width: 960px) 70vw, 50vw"
+        loading="eager"
+      />
+    </h1>
+    <h4 class="texte-antespara">Bruncher, Déjeuner, Gouter</h4>
+    <p class="para-banner">"Des fruits et légumes cultivés et cuisinés sur place dans la ferme familiale"</p>
+    <div class="banner-btns">
+      <Button size="large" data-order-open>
+        Commander <Icon name="delivery" class="moto-icon" />
+      </Button>
+    </div>
+  </div>
+</div>

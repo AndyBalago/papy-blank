@@ -1,0 +1,17 @@
+---
+import { Image } from 'astro:assets';
+import event2 from '../../assets/images/event-2.jpg';
+import event3 from '../../assets/images/event-3.jpg';
+import event4 from '../../assets/images/event-4.jpg';
+import './EventsGallery.css';
+
+const events = [event2, event3, event4];
+---
+
+<div class="container">
+  <div class="gallery-wrap">
+    {events.map((src) => (
+      <Image class="item" src={src} alt="" widths={[400, 800, 1200]} sizes="(max-width: 700px) 64vw, 22vw" />
+    ))}
+  </div>
+</div>

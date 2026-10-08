@@ -1,0 +1,333 @@
+.la-ferme-container {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--verte-claire);
+}
+
+.titres-ferme {
+    text-align: center;
+    font-size: 3vw;
+}
+
+.section-ferme {
+
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 5%;
+}
+
+/*------  Section Description Ferme   ----*/
+.ferme-cont {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: auto;
+    background-image: url('../../assets/backgrounds/ferme-pano.webp');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    overflow: hidden;
+    background-attachment: fixed;
+}
+
+.titre-descr-ferme {
+    margin-top: -1%;
+    color: var(--verte-claire);
+    padding-bottom: 2%;
+    font-size: 4vw;
+}
+
+.descr-ferme-div {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2%;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.paragraphe-descr-ferme {
+    margin: 0;
+    font-size: 2vw;
+    text-align: center;
+    color: var(--beige-claire);
+    width: 80%;
+}
+
+.map-cont {
+    width: 100%;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.map-cont iframe {
+    width: 100%;
+    height: 100%;
+    border: 5px solid var(--verte-claire);
+    border-radius: 2rem;
+}
+/*-----------------------------*/
+/*---Section Histoire Ferme----*/
+/*-----------------------------*/
+.histoire-cont {
+    background-color: var(--beige-claire);
+    height: auto;
+    width: auto;
+    overflow: hidden;
+    padding: 2%;
+}
+
+.titre-histoire-ferme {
+    color: var(--verte-fonce);
+}
+
+.histoire-paragraphe {
+    color: var(--marron-fonce);
+    font-size: 2vw;
+    text-align: justify;
+    letter-spacing: 1px;
+    padding-right: 5%;
+    position: relative;
+}
+
+.ancienne-ferme {
+    float: left;
+    width: 18%;
+    height: auto;
+    display: block;
+    margin: 1%;
+    border: 5px solid var(--verte-claire);
+}
+
+.photo-ferme {
+    float: right;
+    width: 18%;
+    height: auto;
+    display: block;
+    margin: 1%;
+    border: 5px solid var(--verte-claire);
+}
+
+/*--------------------------*/
+/*-----Section Legumes et Fruits------*/
+/*--------------------------*/
+.legumes-cont,
+.fruits-cont {
+    height: fit-content;
+    margin: 0 auto;
+    padding: 2% 5%;
+}
+
+.titre-legumes-ferme {
+    color: var(--marron-fonce);
+}
+
+.legumes-paragraphe {
+    color: var(--verte-fonce);
+    font-size: 2vw;
+    text-align: center;
+    letter-spacing: 1px;
+}
+
+.fruits-cont {
+    background-color: var(--marron-fonce);
+}
+
+.titre-fruits-ferme {
+    color: var(--verte-claire);
+}
+
+.fruits-paragraphe {
+    color: var(--beige-claire);
+    font-size: 2vw;
+    text-align: center;
+    letter-spacing: 1px;
+}
+
+/*--------------------------*/
+/*-----Gallery------*/
+/*--------------------------*/
+.gallery-ferme {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    width: 80%;
+    gap: 15px;
+    justify-items: center;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+.gallery-ferme img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    max-width: 100%;
+    border-radius: 5%;
+}
+
+
+/*--------------------------*/
+/*-----Gallery------*/
+/*--------------------------*/
+.gallery-ferme {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Tres columnas en pantallas grandes */
+    width: 80%;
+    gap: 15px;
+    justify-items: center;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+.gallery-ferme img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    max-width: 100%;
+}
+
+@media screen and (max-width: 960px) {
+    .ferme-cont {
+        height: auto;
+        padding-top: 15%;
+        padding-bottom: 20%;
+    }
+
+    .descr-ferme-div {
+        grid-template-columns: 1fr;
+        gap: 0;
+        justify-content: center;
+        align-items: center;
+        padding: 0;
+        gap: 20%;
+    }
+
+    .paragraphe-descr-ferme {
+        width: 100%;
+    }
+
+    .legumes-cont,
+    .fruits-cont,
+    .histoire-cont {
+        height: auto;
+        padding: 5% 5%;
+        padding-bottom: 10%;
+    }
+
+    .descr-ferme-div {
+        gap: 10%;
+    }
+
+    .map-cont {
+
+        width: 50%;
+        justify-self: center;
+        height: 300px;
+
+    }
+
+    .titre-histoire-ferme,
+    .titre-legumes-ferme,
+    .titre-fruits-ferme {
+        font-size: 5vw;
+    }
+
+    .titre-descr-ferme {
+        font-size: 5vw;
+    }
+
+    .para-gen-ferme {
+        font-size: 3vw;
+    }
+
+    .paragraphe-descr-ferme {
+        font-size: 4vw;
+    }
+
+    .photo-ferme,
+    .ancienne-ferme {
+        width: 30%;
+    }
+
+    .legumes-paragraphe,
+    .fruits-paragraphe {
+        padding: 0 3%;
+    }
+    .gallery-ferme {
+        grid-template-columns: repeat(2, 1fr); /* 2 columnas para pantallas medianas */
+    }
+
+}
+
+/*--------------------------*/
+/*-----Responsive para pantallas pequeñas------*/
+/*--------------------------*/
+@media screen and (max-width: 750px) {
+    .titres-ferme {
+        font-size: 10vw;
+    }
+    .map-cont{
+        width: 80%;
+    }
+
+    .para-gen-ferme {
+        font-size: 5vw;
+    }
+    .ferme-cont{
+        padding-top: 30%;
+    }
+    .legumes-cont,
+    .fruits-cont {
+        height: auto;
+        padding-top: 10%;
+        padding-bottom: 10%;
+    }
+    
+
+    .titre-histoire-ferme,
+    .titre-legumes-ferme,
+    .titre-fruits-ferme {
+        font-size: 8vw;
+    }
+
+    .histoire-cont {
+        padding: 5%;
+        height: auto;
+    }
+
+    .histoire-paragraphe {
+        font-size: 5vw;
+        text-align: center;
+        padding-right: 0;
+    }
+
+    /* Ajustes para que las imágenes ocupen todo el ancho en pantallas pequeñas */
+    .ancienne-ferme,
+    .photo-ferme {
+        width: 90%; /* Ocupa casi todo el ancho */
+        height: auto;
+        margin: 10px auto; /* Centra las imágenes y agrega espacio alrededor */
+        float: none; /* Quita el efecto de float para que estén en su propia línea */
+        display: block;
+    }
+
+    /* Ajustes para la galería en pantallas pequeñas */
+    .gallery-ferme {
+        grid-template-columns: 1fr; /* Dos columnas en pantallas medianas */
+        width: 90%;
+        gap: 20px;
+    }
+
+    .gallery-ferme img {
+        width:80%;
+        height: auto;
+        object-fit: cover;
+    }
+}

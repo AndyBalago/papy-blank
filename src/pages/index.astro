@@ -1,0 +1,134 @@
+---
+import { Image } from 'astro:assets';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Hero from '../components/home/Hero.astro';
+import PhotoLightbox from '../components/home/PhotoLightbox.astro';
+import EventsGallery from '../components/home/EventsGallery.astro';
+import brunch5 from '../assets/images/brunch-5.jpg';
+import fermePere from '../assets/images/ferme-pere.jpg';
+import cultivo1 from '../assets/images/cultivo-1.webp';
+import cultivo2 from '../assets/images/cultivo-2.webp';
+import cultivo3 from '../assets/images/cultivo-3.webp';
+import fruits1 from '../assets/images/fruits-1.webp';
+import brunch1 from '../assets/images/brunch-1.webp';
+import brunch2 from '../assets/images/brunch-2.webp';
+import brunch4 from '../assets/images/brunch-4.webp';
+import brunchInsta from '../assets/images/brunch-insta.webp';
+import '../styles/pages/home.css';
+
+const farmPhotos = [
+  { src: cultivo1, alt: 'Cultures de la ferme' },
+  { src: cultivo3, alt: 'Cultures de la ferme' },
+  { src: fruits1, alt: 'Fruits de la ferme' },
+  { src: cultivo2, alt: 'Cultures de la ferme' },
+];
+const brunchPhotos = [
+  { src: brunch1, alt: 'Box brunch Papy Blank' },
+  { src: brunchInsta, alt: 'Box brunch Papy Blank' },
+  { src: brunch2, alt: 'Box brunch Papy Blank' },
+  { src: brunch4, alt: 'Box brunch Papy Blank' },
+];
+const sectionImageSizes = '(max-width: 960px) 90vw, 45vw';
+---
+
+<BaseLayout>
+  <div class="homepage">
+    <Hero />
+    <div class="homepage-content">
+      <section class="home-description section">
+        <div class="home-text">
+          <h2 class="titre-descrp titre-descr">PAPY BLANK C'EST QUOI ?</h2>
+          <p class="paragraphe-home para-descr para-home">
+            Papy Blank est un concept unique : Nous transformons des produits cultivés dans la ferme familiale pour
+            vous concocter des brunchs, déjeuners ou goûters.<br /><br />
+            Des plats livrés directement chez vous sous forme de box gourmandes. Ces box mettent en valeur des
+            produits de qualité, offrant un plaisir aussi bien visuel que gustatif.
+          </p>
+          <span class="cont-buttons">
+            <a href="/le-concept" class="link-concept-intro"><button class="buttom-concept-home-intro">LE CONCEPT</button></a>
+          </span>
+        </div>
+        <figure class="images-home descr-img">
+          <Image class="images-sections-intro imagen-home-descr" src={brunch5} alt="Brunch Papy Blank" widths={[480, 960, brunch5.width]} sizes={sectionImageSizes} />
+        </figure>
+      </section>
+      <hr class="section-divider" />
+      <hr class="section-divider2" />
+      <section class="home-histoire section">
+        <figure class="images-home histoire-img">
+          <Image class="images-sections-intro imagen-hist" src={fermePere} alt="La ferme familiale" widths={[480, 960, fermePere.width]} sizes={sectionImageSizes} />
+        </figure>
+        <div class="home-text-histoire">
+          <h2 class="titre-descrp titre-hist">PAPY BLANK, UNE HISTOIRE FAMILIALE</h2>
+          <p class="paragraphe-home para-hist para-home">
+            Papy Blank réunit plusieurs savoir-faire. Mes parents cultivent des fruits et légumes en agriculture
+            raisonnée, avec pour objectif de préserver les nutriments dans les sols pour garantir des produits qui
+            ont du goût. <br /><br />
+            En tant que professionnel de la restauration, je m'occupe de les cuisiner pour les sublimer.
+          </p>
+          <span class="cont-buttons">
+            <a href="/la-ferme" class="link-ferme-intro"><button class="buttom-laferme-home">LA FERME</button></a>
+          </span>
+        </div>
+      </section>
+      <section class="home-mots-createur section">
+        <div class="home-text-createur">
+          <h2 class="titre-descrp">MOTS DU CRÉATEUR:</h2>
+          <p class="mots">
+            “Après de multiples expériences en restauration en France et à l'étranger, je voulais rentrer dans le
+            Nord et créer un concept qui me ressemble. Une cuisine mettant en avant mon savoir faire et celui de mes
+            parents”
+          </p>
+          <p class="paragraphe-home signature-chef mots para-home">Mathieu</p>
+        </div>
+      </section>
+      <section class="home-bottom section">
+        <div class="container-concept-home">
+          <div class="text-concept-home">
+            <p class="paragraphe-bottom-home un para-home">
+              Papy blank s'adapte en fonction des fruits et légumes récoltés afin de vous proposez une offre aussi
+              bien sucrée que salée.
+            </p>
+            <span class="cont-buttons">
+              <a href="/le-concept" class="link-concept"><button class="button-home buttom-concept-home">LE CONCEPT</button></a>
+            </span>
+          </div>
+          <PhotoLightbox id="ferme" class="gallerie-concept-home" images={farmPhotos} />
+        </div>
+        <hr class="ligne-separatoire" />
+        <div class="container-brunchs-home">
+          <PhotoLightbox id="brunch" class="gallerie-brunch-home" images={brunchPhotos} />
+          <div class="text-brunch-home">
+            <p class="paragraphe-bottom-home deux para-home">
+              Nous vous proposons des box brunch sucré, salé ainsi que des plats et des desserts pour vos déjeuners,
+              livrées dans les Weppes et ses alentours.
+            </p>
+            <span class="cont-buttons">
+              <button class="button-home" data-order-open>COMMANDER</button>
+            </span>
+          </div>
+        </div>
+      </section>
+      <section class="events-section">
+        <div class="container-event-home">
+          <div class="text-concept-home">
+            <h2 class="titre-event titre-descrp">Personnalisez vos événements...</h2>
+            <p class="paragraphe-event-home para-home">
+              Nous pouvons vous accompagner dans vos événements familiaux, afin de vous préparer un buffet
+              personnalisé, mais aussi dans vos événements professionnels
+              <span class="event-negrita">(livraison de petit-déjeuner sucré/salé, buffet brunch, plateaux repas, départ en retraite).</span><br /><br />
+              Nos prestations sont réalisées selon vos envies, avec des produits locaux, des fruits et légumes
+              cultivés à la ferme et de la cuisine faite maison.
+            </p>
+            <span class="cont-buttons">
+              <a href="/contact" class="link-event"><button class="button-event">CONTACTEZ-NOUS</button></a>
+            </span>
+          </div>
+          <div class="gallery-events">
+            <EventsGallery />
+          </div>
+        </div>
+      </section>
+    </div>
+  </div>
+</BaseLayout>

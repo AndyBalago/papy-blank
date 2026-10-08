@@ -1,0 +1,20 @@
+---
+import Icon from '../ui/Icon.astro';
+import { contact, social } from '../../config/site';
+import './SocialSidebar.css';
+
+const items = [
+  { href: social.facebook, label: 'Facebook', icon: 'facebook' },
+  { href: social.instagram, label: 'Instagram', icon: 'instagram' },
+  { href: `mailto:${contact.email}`, label: 'Email', icon: 'envelope' },
+  { href: contact.phoneHref, label: 'Téléphone', icon: 'phone' },
+] as const;
+---
+
+<div class="social-media-module">
+  {items.map((item) => (
+    <a href={item.href} target="_blank" rel="noopener noreferrer" class="social-icon" aria-label={item.label}>
+      <Icon name={item.icon} />
+    </a>
+  ))}
+</div>

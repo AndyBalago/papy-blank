@@ -1,0 +1,51 @@
+---
+// Single "Commander" modal for the whole site.
+// Any element with the `data-order-open` attribute opens it.
+import { Image } from 'astro:assets';
+import { orderLinks } from '../../config/site';
+import femme from '../../assets/images/femme-pense.webp';
+import './OrderModal.css';
+---
+
+<div class="modal" id="order-modal" role="dialog" aria-modal="true" aria-labelledby="order-modal-title" hidden>
+  <div class="modal-content">
+    <button type="button" class="modal-close" aria-label="Fermer" data-order-close>&times;</button>
+    <Image src={femme} alt="" width={200} />
+    <h2 id="order-modal-title">Que voulez-vous manger?</h2>
+    <div class="modal-buttons">
+      {orderLinks.map((link) => (
+        <a href={link.href} target="_blank" rel="noopener noreferrer">{link.label}</a>
+      ))}
+    </div>
+  </div>
+</div>
+
+<script>
+  const modal = document.getElementById('order-modal')!;
+  let lastTrigger: HTMLElement | null = null;
+
+  const open = (trigger: HTMLElement) => {
+    lastTrigger = trigger;
+    modal.hidden = false;
+    modal.querySelector<HTMLElement>('[data-order-close]')!.focus();
+  };
+  const close = () => {
+    modal.hidden = true;
+    lastTrigger?.focus();
+  };
+
+  document.addEventListener('click', (event) => {
+    const target = event.target as HTMLElement;
+    const trigger = target.closest<HTMLElement>('[data-order-open]');
+    if (trigger) {
+      event.preventDefault();
+      open(trigger);
+    } else if (target === modal || target.closest('[data-order-close]')) {
+      close();
+    }
+  });
+
+  document.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape' && !modal.hidden) close();
+  });
+</script>

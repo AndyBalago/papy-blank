@@ -1,0 +1,21 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="Page introuvable">
+  <section class="not-found">
+    <h1>Page introuvable</h1>
+    <p>La page que vous cherchez n'existe pas ou a été déplacée.</p>
+    <p><a href="/">Retour à l'accueil</a></p>
+  </section>
+</BaseLayout>
+
+<style>
+  .not-found {
+    min-height: 60vh;
+    padding: 140px 5% 60px;
+    text-align: center;
+    color: var(--marron-fonce);
+    background-color: var(--beige-claire);
+  }
+</style>

@@ -1,0 +1,15 @@
+---
+import type { HTMLAttributes } from 'astro/types';
+import './Button.css';
+
+interface Props extends HTMLAttributes<'button'> {
+  variant?: 'primary' | 'outline';
+  size?: 'medium' | 'large';
+}
+
+const { variant = 'primary', size = 'medium', type = 'button', ...rest } = Astro.props;
+---
+
+<button class={`btn btn--${variant} btn--${size}`} type={type} {...rest}>
+  <slot />
+</button>

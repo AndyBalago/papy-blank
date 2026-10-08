@@ -1,0 +1,30 @@
+# Apache (Hostinger) configuration for the static Astro build.
+
+ErrorDocument 404 /404.html
+
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+
+  # Permanent redirects from the old React (CRA) URLs
+  RewriteRule ^Home/?$ / [R=301,L,NC]
+  RewriteRule ^LaFerme/?$ /la-ferme/ [R=301,L,NC]
+  RewriteRule ^LeConcept/?$ /le-concept/ [R=301,L,NC]
+  RewriteRule ^MentionLegales/?$ /mentions-legales/ [R=301,L,NC]
+  RewriteRule ^PolitiquesDeConfidentialite/?$ /politique-de-confidentialite/ [R=301,L,NC]
+</IfModule>
+
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresByType image/webp "access plus 1 month"
+  ExpiresByType image/jpeg "access plus 1 month"
+  ExpiresByType image/png "access plus 1 month"
+  ExpiresByType video/mp4 "access plus 1 month"
+  ExpiresByType font/ttf "access plus 1 year"
+</IfModule>
+
+# Files under /_astro/ have a content hash in their name and never change
+<IfModule mod_headers.c>
+  <If "%{REQUEST_URI} =~ m#^/_astro/#">
+    Header set Cache-Control "public, max-age=31536000, immutable"
+  </If>
+</IfModule>

@@ -1,0 +1,59 @@
+---
+import { Image } from 'astro:assets';
+import Button from '../ui/Button.astro';
+import Icon from '../ui/Icon.astro';
+import { navLinks } from '../../config/site';
+import logo from '../../assets/images/logo-vert-marron.png';
+import './Navbar.css';
+---
+
+<nav class="navbar">
+  <div class="navbar-container">
+    <a href="/" class="navbar-logo">
+      <Image src={logo} alt="Papy Blank" height={180} loading="eager" />
+    </a>
+    <button type="button" class="menu-icon" aria-label="Menu" aria-expanded="false" aria-controls="nav-menu">
+      <Icon name="menu-open" class="menu-responsive" />
+      <Icon name="menu-close" class="menu-responsive" hidden />
+    </button>
+    <ul class="nav-menu" id="nav-menu">
+      {navLinks.map((link, i) => (
+        <Fragment>
+          {i > 0 && <span class="ligne-nav-menu" />}
+          <li class="nav-item">
+            <a href={link.href} class:list={['nav-links', { dtype: link.accent }]}>{link.label}</a>
+          </li>
+        </Fragment>
+      ))}
+    </ul>
+    <div class="bouton-boutique">
+      <Button data-order-open>
+        <span class="button-text">Commander</span>
+        <Icon name="basket" class="panier-icon" />
+      </Button>
+    </div>
+    <div class="mobile-shop-icon">
+      <button type="button" class="vinculo-commander-navbar" aria-label="Commander" data-order-open>
+        <Icon name="basket" class="shop-icono" />
+      </button>
+    </div>
+  </div>
+</nav>
+
+<script>
+  const navbar = document.querySelector<HTMLElement>('.navbar')!;
+  const toggle = navbar.querySelector<HTMLButtonElement>('.menu-icon')!;
+  const menu = navbar.querySelector<HTMLElement>('.nav-menu')!;
+  const [openIcon, closeIcon] = toggle.querySelectorAll<SVGElement>('svg');
+
+  toggle.addEventListener('click', () => {
+    const isOpen = menu.classList.toggle('active');
+    toggle.setAttribute('aria-expanded', String(isOpen));
+    openIcon.toggleAttribute('hidden', isOpen);
+    closeIcon.toggleAttribute('hidden', !isOpen);
+  });
+
+  const onScroll = () => navbar.classList.toggle('scrolled', window.scrollY > 50);
+  window.addEventListener('scroll', onScroll, { passive: true });
+  onScroll();
+</script>

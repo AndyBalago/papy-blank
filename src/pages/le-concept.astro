@@ -1,0 +1,118 @@
+---
+import { Image } from 'astro:assets';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import brunchConcept from '../assets/images/brunch-concept.jpg';
+import pauseGouter from '../assets/images/pause-gouter.jpg';
+import pauseDejeuner from '../assets/images/pause-dejeuner.jpg';
+import '../styles/pages/le-concept.css';
+
+const imageWidths = [480, 960, 1400];
+const imageSizes = '(max-width: 960px) 90vw, 45vw';
+---
+
+<BaseLayout
+  title="Le Concept"
+  description="Brunchs, goûters et déjeuners livrés chez vous, préparés avec les fruits et légumes de la ferme familiale Papy Blank."
+>
+  <div class="leConcept-container">
+    <section class="description-concept section">
+      <div class="container-sections description-div">
+        <h1 class="titre-concept">LE CONCEPT</h1>
+        <h3 class="sous-titre-descr">De la ferme à chez vous</h3>
+        <p class="paragraphe-descr">
+          Tout commence par ce nom....Papy Blank <br /><br />
+          <span class="negrita-exp-concept">“Papy”</span> pour mettre en avant les produits cultivés par mon père qui
+          est aussi grand père, mais aussi pour le coté humain, convivial et chaleureux du concept,
+          <br /><br />et <span class="negrita-exp-concept">"Blank"</span> en l’honneur de notre nom et des liens
+          familiaux du concept.
+        </p>
+      </div>
+    </section>
+    <section class="vision section">
+      <div class="container-sections">
+        <div class="wrapper-vision">
+          <div class="vision-container contains">
+            <h3 class="sous-titres">LA VISION</h3>
+            <p class="paragraphe-vision para-vision">
+              Papy Blank a pour volonté de cultiver, de transformer et de vendre des produits issus d’une agriculture
+              raisonnée. Une agriculture qui favorise les nutriments dans les sols afin de produire des fruits et
+              légumes qui ont du goût.
+            </p>
+          </div>
+          <div class="cuisine-container contains">
+            <h3 class="sous-titres">LA CUISINE</h3>
+            <p class="paragraphe-cuisine para-vision">
+              Notre volonté est de vous proposer un large choix de produits sucré et salé. L’offre varie en fonction
+              des saisons et des produits cultivés, notre but est de vous proposer une cuisine équilibrée et
+              gourmande.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="le-sale section">
+      <div class="descr-sale">
+        <h2 class="titres titre-sale">Les brunchs</h2>
+        <p class="paragraphe-sale paragraphes">
+          Pour les brunchs, différentes options sont disponibles :
+          <span class="negrita-text-sucre">“La box brunch à personnaliser”</span> Vous composez vous-même votre box en
+          sélectionnant vos produits préférés selon notre offre. Une offre flexible qui s’adapte à vos envies.<br /><br />
+          <span class="color-verde">“Les box brunch” Vous n’avez rien à faire ! </span>Dans la box brunch, vous avez
+          un brunch complet pour une ou deux personnes, avec des plats simples mais surtout savoureux, mettant en avant
+          les fruits et légumes de la ferme, comme la tartine du moment, les légumes du moment, le granola aux fruits
+          de saison...
+        </p>
+        <button class="button-concept" data-order-open>COMMANDER</button>
+      </div>
+      <figure class="img-container img-sale">
+        <Image src={brunchConcept} alt="Box brunch" widths={imageWidths} sizes={imageSizes} />
+      </figure>
+    </section>
+    <section class="la-pause section">
+      <figure class="img-container img-pause">
+        <Image src={pauseGouter} alt="Pause goûter" widths={imageWidths} sizes={imageSizes} />
+      </figure>
+      <div class="descr-pause">
+        <h2 class="titres titre-pause">Une pause goûter ?</h2>
+        <p class="paragraphe-pause paragraphes">
+          Composez votre box de gaufres liégeoises, des gaufres savoureuses au levain naturel, grâce à la farine de
+          la ferme.
+          <br /><br />Disponibles à l’unité, en coffrets de 10 ou 20, avec pour agrémenter : du caramel fait maison,
+          du coulis de fruits de saison, de la sauce au chocolat, mais aussi un cake qui change en fonction des fruits
+          récoltés, et l’incontournable cheesecake.
+          <br /><br />
+          <span class="negrita-text-sucre subrayado">LES BRUNCHS ET LES GOUTER SONT DISPONIBLES LA SEMAINE ET LE WEEKEND « du mercredi au dimanche inclus »</span>
+        </p>
+        <button class="button-concept" data-order-open>COMMANDER</button>
+      </div>
+    </section>
+    <section class="le-sucre section">
+      <div class="descr-sucre">
+        <h2 class="titres titre-sucre">Les Déjeuners</h2>
+        <p class="paragraphe-sucre paragraphes">
+          Ne perdez plus de temps à vous déplacer pour vos déjeuners : nous vous proposons vos déjeuners livrés chez
+          vous ou sur votre lieu de travail. Notre offre flexible s’adapte à vos envies, avec des plats disponibles à
+          la carte ainsi qu'en menus.<br /><br />
+          Nos recettes mettent à l'honneur les fruits et légumes récoltés à la ferme, comme le potage de saison ou
+          les pommes de terre rattes.<br /><br />
+          <span class="negrita-text-sucre">L’offre déjeuner est disponible du mercredi au vendredi, pendant les horaires du déjeuner.</span><br /><br />
+          <span class="color-verde">Laissez-vous tenter par la simplicité et le goût, et faites de votre pause déjeuner un moment de plaisir !</span>
+        </p>
+        <button class="button-concept" data-order-open>COMMANDER</button>
+      </div>
+      <figure class="img-container img-sucre">
+        <Image src={pauseDejeuner} alt="Déjeuner" widths={imageWidths} sizes={imageSizes} />
+      </figure>
+    </section>
+    <section class="les-produits section">
+      <div class="container-sections div-produits">
+        <h2 class="titres">LES PRODUITS</h2>
+        <p class="paragraphe-produits paragraphes">
+          Les fuits et légumes cultivés dans la ferme familliale à Erquinghem-le-sec. Les autres produits proviennent
+          de fermes et de pisciculture de la région. Par exemple le porc provient de la ferme du Crussobeau, la truite
+          de la pisciculture d'Anzin, la farine du moulin des Weppes.
+        </p>
+      </div>
+    </section>
+  </div>
+</BaseLayout>

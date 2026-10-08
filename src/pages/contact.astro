@@ -1,0 +1,121 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Button from '../components/ui/Button.astro';
+import { contact } from '../config/site';
+import '../styles/pages/contact.css';
+---
+
+<BaseLayout
+  title="Contact"
+  description="Contactez Papy Blank pour vos commandes, vos événements familiaux ou professionnels. 368 Rue de l'Église, Erquinghem-le-Sec."
+>
+  <div class="contact-cont">
+    <section class="tittre-principal-contact">
+      <h1>CONTACTEZ PAPY BLANK</h1>
+    </section>
+    <div class="titre-contact-corp">
+      <h2>CONTACTEZ NOUS</h2>
+    </div>
+    <section class="section-form-contact">
+      <div class="form-cont-global">
+        <h2 class="titres-block-contact">ÉCRIS-NOUS</h2>
+        <hr class="ligne-contact-separation" />
+        <div class="form-container">
+          <form class="contact-form" id="contact-form">
+            <div class="form-group">
+              <label for="name"><span class="visually-hidden">Nom</span></label>
+              <input type="text" id="name" name="name" required placeholder="Nom*" autocomplete="name" />
+            </div>
+            <div class="form-group">
+              <label for="email"><span class="visually-hidden">Email</span></label>
+              <input type="email" id="email" name="email" required placeholder="Email*" autocomplete="email" />
+            </div>
+            <div class="form-group">
+              <label for="sujet"><span class="visually-hidden">Sujet</span></label>
+              <input type="text" id="sujet" name="sujet" required placeholder="Sujet*" />
+            </div>
+            <div class="form-group">
+              <label for="message"><span class="visually-hidden">Message</span></label>
+              <textarea id="message" name="message" required placeholder="Message*"></textarea>
+            </div>
+            <div class="form-group">
+              <p>* Ces champs sont obligatoires</p>
+              <label class="case-termes-contact">
+                <input type="checkbox" name="consent" required />
+                <span>En soumettant ce formulaire, j’accepte que les informations saisies soient exploitées dans le strict cadre de ma demande.</span>
+              </label>
+            </div>
+            <p class="error-message" role="alert" hidden></p>
+            <p class="success-message" role="status" hidden></p>
+            <Button type="submit" size="large">Envoyer</Button>
+          </form>
+          <p class="traitement-donnees-cont">
+            Nous nous engageons à ce que la collecte et le traitement de vos données effectuées à partir du présent site
+            internet soit conforme à la loi informatique et libertés et au règlement général sur la protection des
+            données personnelles (RGPD). Afin d’exercer vos droits, notamment d’accès, de correction ou de retrait de
+            vos données personnelles collectées via ce formulaire, consultez notre
+            <a href="/politique-de-confidentialite">Politique de confidentialité</a>.
+          </p>
+        </div>
+      </div>
+      <div class="cont-coordones-contact">
+        <h2 class="titres-block-contact">PAPY BLANK</h2>
+        <hr class="ligne-contact-separation" />
+        <div class="infos-coordones-contact">
+          <h3 class="addresse-contact-form">Adresse</h3>
+          <p>{contact.address.street}</p>
+          <p>{contact.address.city}</p>
+          <p>Tel: <a href={contact.phoneHref}>{contact.phone}</a></p>
+          <p>Email: <a href={`mailto:${contact.email}`}>{contact.email}</a></p>
+        </div>
+      </div>
+    </section>
+  </div>
+</BaseLayout>
+
+<script>
+  import emailjs from '@emailjs/browser';
+  import { emailjsConfig } from '../config/site';
+
+  const form = document.querySelector<HTMLFormElement>('#contact-form')!;
+  const errorBox = form.querySelector<HTMLElement>('.error-message')!;
+  const successBox = form.querySelector<HTMLElement>('.success-message')!;
+  const submitButton = form.querySelector<HTMLButtonElement>('button[type="submit"]')!;
+
+  const show = (box: HTMLElement, text: string) => {
+    box.textContent = text;
+    box.hidden = false;
+  };
+
+  form.addEventListener('submit', async (event) => {
+    event.preventDefault();
+    errorBox.hidden = true;
+    successBox.hidden = true;
+
+    const data = new FormData(form);
+    const params = {
+      name: String(data.get('name') ?? '').trim(),
+      email: String(data.get('email') ?? '').trim(),
+      sujet: String(data.get('sujet') ?? '').trim(),
+      message: String(data.get('message') ?? '').trim(),
+    };
+    if (Object.values(params).some((value) => !value) || !data.get('consent')) {
+      show(errorBox, 'Merci de remplir tous les champs et d’accepter le traitement de vos données.');
+      return;
+    }
+
+    submitButton.disabled = true;
+    try {
+      await emailjs.send(emailjsConfig.serviceId, emailjsConfig.templateId, params, {
+        publicKey: emailjsConfig.publicKey,
+      });
+      show(successBox, 'Message envoyé avec succès!');
+      form.reset();
+    } catch (err) {
+      console.error('EmailJS error', err);
+      show(errorBox, 'On a eu un problème, réessayez plus tard.');
+    } finally {
+      submitButton.disabled = false;
+    }
+  });
+</script>

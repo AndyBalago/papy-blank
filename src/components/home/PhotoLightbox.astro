@@ -1,0 +1,44 @@
+---
+// Thumbnail grid + full-screen viewer driven by URL hash (:target), no JavaScript needed.
+import type { ImageMetadata } from 'astro';
+import { Image } from 'astro:assets';
+import Icon from '../ui/Icon.astro';
+
+interface Props {
+  id: string;
+  images: { src: ImageMetadata; alt: string }[];
+  class?: string;
+}
+
+const { id, images, class: className } = Astro.props;
+const targetId = (i: number) => `${id}-${i + 1}`;
+---
+
+<div class:list={[className, 'thumbs']}>
+  {images.map((image, i) => (
+    <a href={`#${targetId(i)}`}>
+      <Image src={image.src} alt={image.alt} widths={[300, 600]} sizes="(max-width: 960px) 50vw, 15vw" />
+    </a>
+  ))}
+</div>
+<div class="lightbox">
+  <a href="#!" class="overlay" aria-label="Fermer"></a>
+  {images.map((image, i) => (
+    <div class="target" id={targetId(i)}>
+      {i > 0 ? (
+        <a href={`#${targetId(i - 1)}`} class="nav" title="previous"><Icon name="arrow-left" /></a>
+      ) : (
+        <span></span>
+      )}
+      <div class="content">
+        <Image src={image.src} alt={image.alt} widths={[800, 1600]} sizes="90vw" />
+      </div>
+      {i < images.length - 1 ? (
+        <a href={`#${targetId(i + 1)}`} class="nav" title="next"><Icon name="arrow-right" /></a>
+      ) : (
+        <span></span>
+      )}
+    </div>
+  ))}
+  <a href="#!" class="close nav" aria-label="Fermer"><Icon name="close-circle" class="close" /></a>
+</div>
