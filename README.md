@@ -39,5 +39,15 @@ src/
 - **Changer un téléphone, un e-mail ou un lien de commande** : `src/config/site.ts`.
 - **Ajouter une photo** : la placer dans `src/assets/images/`, puis l'importer dans la page
   et l'afficher avec le composant `<Image>` d'`astro:assets`.
-- **Déployer** : `npm run build`, puis envoyer le contenu de `dist/` (y compris `.htaccess`)
-  dans `public_html` sur Hostinger.
+- **Déployer** : chaque `git push` sur `master` publie le site automatiquement
+  (voir ci-dessous).
+
+## Déploiement automatique
+
+Le workflow `.github/workflows/deploy.yml` compile le site puis envoie `dist/` sur Hostinger
+en FTPS (`ftp.papyblank.fr`, compte FTP limité à `public_html`). Les identifiants sont des
+secrets du dépôt GitHub : `FTP_USERNAME` et `FTP_PASSWORD`.
+
+- Suivre une publication : onglet **Actions** du dépôt sur GitHub.
+- Republier sans changer le code : **Actions → Deploy to Hostinger → Run workflow**.
+- Publier à la main (secours) : `npm run build`, puis copier `dist/` dans `public_html` avec FileZilla.
