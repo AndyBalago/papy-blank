@@ -16,7 +16,7 @@ const ModalCommander = ({ showModal, closeModal }) => {
                         target="_blank"
                         rel="noopener noreferrer"
                     >
-                        <button>Dejeuner</button>
+                        <button>Plats Cuisinés</button>
                     </a>
                     <a
                         href='https://papy-blank-brunch.c.obypay.com/v-v5.39.7/i-yYjsf6px2G-1/onboarding'
