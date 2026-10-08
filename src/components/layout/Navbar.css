@@ -38,8 +38,10 @@
 }
 
 .navbar-logo img {
+  display: block;
   width: auto;
-  height: 9vh;
+  /* Never taller than the 80px bar, so it keeps a gap above and below */
+  height: min(9vh, 64px);
 }
 
 /* ---------- Links ---------- */
@@ -136,12 +138,12 @@
 @media screen and (max-width: 960px) {
   .navbar-logo {
     position: absolute;
-    top: 0;
+    top: 8px;
     left: 5%;
   }
 
   .navbar-logo img {
-    height: 8vh;
+    height: min(8vh, 56px);
   }
 
   .bouton-boutique {
@@ -201,7 +203,7 @@
 
 @media screen and (max-width: 750px) {
   .navbar-logo img {
-    height: 9vh;
+    height: min(9vh, 56px);
   }
 
   .navbar-logo:hover {
