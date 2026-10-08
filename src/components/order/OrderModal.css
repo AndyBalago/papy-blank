@@ -75,7 +75,7 @@
 .modal-buttons a {
     padding: 10px 20px;
     font-size: 1.5vw; /* Ajuste de tamaño de fuente para pantallas pequeñas */
-    font-family: 'KrabulerFont';
+    font-family: var(--font-display);
     cursor: pointer;
     background-color: var(--verte-fonce);
     color: white;

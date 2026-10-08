@@ -5,7 +5,7 @@
     outline: none;
     border: none;
     cursor: pointer;
-    font-family: 'KrabulerFont';
+    font-family: var(--font-display);
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -14,7 +14,7 @@
 
 .btn--primary{
     background-color: var(--primary);
-    color: rgb(244, 237, 227);
+    color: var(--beige-claire);
     border: 1px solid var(--primary);
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
     border-radius: 5px;
@@ -23,7 +23,7 @@
 
 .btn--outline {
     background-color: transparent;
-    color: rgb(244, 237, 227);
+    color: var(--beige-claire);
     padding: 8px 20px;
     border: 1px solid var(--primary);
     transition: all 0.3s ease-out;
@@ -40,7 +40,7 @@
 }
 
 .btn--medium:hover, .btn--large:hover {
-    background: rgb(171, 212, 167);
-    color: rgb(244, 237, 227);
+    background: var(--verte-claire);
+    color: var(--beige-claire);
     transition: 250ms;
 }

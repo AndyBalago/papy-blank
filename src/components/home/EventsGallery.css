@@ -20,10 +20,6 @@
   object-fit: cover;
   flex: 1;
   height: 100%;
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  transition: none; /* Elimina la transición para evitar cambios de tamaño */
 }
 
 /* Media query para pantallas con un ancho máximo de 960px */

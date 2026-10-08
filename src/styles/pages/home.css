@@ -1,13 +1,11 @@
+/* Home page. Hero, photo galleries and events gallery have their own CSS next to their components. */
+
 .homepage-content {
     display: flex;
     flex-direction: column;
-    padding: 0;
-    margin: 0;
 }
 
-/*-------------------------*/
-/* FONT SIZE H2 ET P  */
-/*-------------------------*/
+/* ---------- Shared text sizes ---------- */
 
 .titre-descrp {
     font-size: 3vw;
@@ -17,23 +15,16 @@
     font-size: 1.5vw;
 }
 
-/*-------------------------*/
-/*Section DIvider*/
-/*-------------------------*/
-
-.section-divider {
-    border: 12px solid var(--verte-claire);
-    width: auto;
-    margin: 0;
-    padding: 0;
+.cont-buttons {
+    display: flex;
+    justify-content: center;
 }
 
-.section-divider2 {
-    border: 15px solid var(--marron-fonce);
-    width: auto;
-    margin: 0;
-    padding: 0;
+.home-cta {
+    margin: 1rem;
 }
+
+/* ---------- Intro sections: "C'est quoi ?" and "Histoire familiale" ---------- */
 
 .home-description,
 .home-histoire {
@@ -43,37 +34,7 @@
     justify-content: center;
     height: 90vh;
     width: 100%;
-    margin: 0;
     text-align: center;
-
-}
-
-.home-text {
-    padding: 0 0 0 6%;
-    margin: 0;
-    display: flex;
-    flex-direction: column;
-    overflow: hidden;
-
-}
-
-.home-text-histoire {
-    padding: 0 10% 0 0;
-    margin: 0;
-    display: flex;
-    flex-direction: column;
-    overflow: hidden;
-}
-
-/*-------------------------*/
-/* COLOR H2, P and BACKGROUND S1 and S */
-/*-------------------------*/
-.titre-descr {
-    color: var(--verte-claire);
-}
-
-.titre-hist {
-    color: var(--marron-fonce);
 }
 
 .home-description {
@@ -84,32 +45,35 @@
     background-color: var(--verte-claire);
 }
 
+.home-text,
+.home-text-histoire {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.home-text {
+    padding-left: 6%;
+}
+
+.home-text-histoire {
+    padding-right: 10%;
+}
+
+.titre-descr {
+    color: var(--verte-claire);
+}
+
+.titre-hist {
+    color: var(--marron-fonce);
+}
+
 .para-descr {
     color: var(--beige-claire);
 }
 
 .para-hist {
     color: var(--verte-fonce);
-}
-
-.paragraphe-home.mots {
-    color: var(--beige-claire);
-}
-
-
-/*-------------------------*/
-/* Images et animation S1 et S2 */
-/*-------------------------*/
-
-.images-sections {
-    view-timeline-name: --image;
-    view-timeline-axis: block;
-
-    animation-timeline: --image;
-    animation-name: show;
-
-    animation-range: entry 25% cover 40%;
-    animation-fill-mode: both;
 }
 
 .images-home {
@@ -121,6 +85,10 @@
     padding-left: 15%;
 }
 
+.descr-img {
+    width: 80%;
+}
+
 .imagen-home-descr {
     border: 5px solid var(--verte-claire);
 }
@@ -129,167 +97,39 @@
     border: 5px solid var(--beige-claire);
 }
 
-.images-sections {
-    height: fit-content;
+/* Two stacked coloured bars between the intro sections */
+.section-divider,
+.section-divider2 {
+    margin: 0;
+    padding: 0;
 }
 
-.descr-img {
-    width: 80%;
+.section-divider {
+    border: 12px solid var(--verte-claire);
 }
 
-/*-------------------------*/
-/* Buttons Section concept*/
-/*-------------------------*/
-
-.buttom-concept-home-intro {
-
-    font-family: 'KrabulerFont';
-    font-weight: bold;
-    font-size: 1.5rem;
-    cursor: pointer;
-    border: none;
-    width: 180px;
-    height: 70px;
-    padding: 1rem .5rem;
-    margin: 1rem;
-
-    --b: 3px;
-    /* border thickness */
-    --s: .15em;
-    /* size of the corner */
-    --cv: var(--verte-claire);
-
-    padding: calc(.05em + var(--s)) calc(.3em + var(--s));
-    color: var(--cv);
-    --_p: var(--s);
-    background:
-        conic-gradient(from 90deg at var(--b) var(--b), #0000 90deg, var(--cv) 0) var(--_p) var(--_p)/calc(100% - var(--b) - 2*var(--_p)) calc(100% - var(--b) - 2*var(--_p));
-    transition: .3s linear, color 0s, background-color 0s;
-    outline: var(--b) solid #0000;
-    outline-offset: .2em;
+.section-divider2 {
+    border: 15px solid var(--marron-fonce);
 }
 
-.buttom-concept-home-intro:hover,
-.buttom-concept-home-intro:focus-visible {
-    --_p: 0px;
-    outline-color: var(--cv);
-    outline-offset: .05em;
-    background-color: var(--verte-claire);
-}
-
-.buttom-concept-home-intro:hover {
-    color: var(--verte-fonce);
-}
-
-.buttom-concept-home-intro:active {
-    background: var(--beige-claire);
-    color: #fff;
-}
-
-.link-concept-intro {
-    color: var(--verte-claire);
-    text-decoration: none;
-}
-
-/*-------------------------*/
-/* Buttons Section histoire*/
-/*-------------------------*/
-
-.buttom-laferme-home {
-    font-family: 'KrabulerFont';
-    font-weight: bold;
-    font-size: 1.5rem;
-    cursor: pointer;
-    border: none;
-    width: 180px;
-    height: 70px;
-    padding: 1rem .5rem;
-    margin: 1rem;
-
-    --b: 3px;
-    /* border thickness */
-    --s: .15em;
-    /* size of the corner */
-    --cv: var(--marron-fonce);
-
-    padding: calc(.05em + var(--s)) calc(.3em + var(--s));
-    color: var(--cv);
-    --_p: var(--s);
-    background:
-        conic-gradient(from 90deg at var(--b) var(--b), #0000 90deg, var(--cv) 0) var(--_p) var(--_p)/calc(100% - var(--b) - 2*var(--_p)) calc(100% - var(--b) - 2*var(--_p));
-    transition: .3s linear, color 0s, background-color 0s;
-    outline: var(--b) solid #0000;
-    outline-offset: .2em;
-}
-
-.buttom-laferme-home:hover,
-.buttom-laferme-home:focus-visible {
-    --_p: 0px;
-    outline-color: var(--cv);
-    outline-offset: .05em;
-    background-color: var(--marron-fonce);
-    color: var(--beige-claire);
-}
-
-.buttom-laferme-home:hover .link-ferme-intro {
-    color: var(--beige-claire);
-}
-
-.buttom-laferme-home:active {
-    background: var(--beige-claire);
-
-}
-
-.buttom-laferme-home:active .link-ferme-intro {
-
-    color: var(--marron-fonce);
-}
-
-.link-ferme-intro {
-    color: var(--marron-fonce);
-    text-decoration: none;
-}
-
-
-/*-----------------------*/
-/*------MOts Creatuer------*/
-/*-----------------------*/
+/* ---------- Creator's quote ---------- */
 
 .home-mots-createur {
     display: grid;
-    grid-template-columns: 1fr;
     align-items: center;
-    justify-content: center;
-    width: auto;
     height: 100vh;
-    background-image: url('../../assets/backgrounds/ferme-pano.webp');
-    background-size: cover;
-    background-position: center;
-    position: relative;
+    background: url('../../assets/backgrounds/ferme-pano.webp') center / cover fixed;
     overflow: hidden;
-    background-attachment: fixed;
-}
-
-.home-mots-createur::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: auto;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-}
-
-.home-text-createur h2 {
-    color: var(--verte-claire);
 }
 
 .home-text-createur {
     padding: 0 10%;
-    position: relative;
-    z-index: 1;
     text-align: center;
     color: white;
+}
+
+.home-text-createur h2 {
+    color: var(--verte-claire);
 }
 
 .mots {
@@ -297,160 +137,94 @@
     font-size: 2vw;
 }
 
+.paragraphe-home.mots {
+    color: var(--beige-claire);
+}
+
 .signature-chef {
     text-align: right;
     width: 80%;
 }
 
-.foto-chef {
-    border-radius: 50%;
-    width: 20%;
-
-}
-
-/*-------------------------*/
-/* Section Photos concept et brunchs*/
-/*-------------------------*/
-.container-concept-home {
-    display: grid;
-    grid-template-columns: .5fr 1.5fr;
-    padding: 5% 0;
-}
-
-.container-brunchs-home {
-    display: grid;
-    grid-template-columns: 1.5fr .5fr;
-    padding: 5% 0;
-}
+/* ---------- Farm and brunch galleries ---------- */
 
 .home-bottom {
-    padding: 20px 5%;
     display: grid;
-    grid-template-columns: 1fr;
     align-items: center;
-    justify-content: center;
-    width: auto;
+    padding: 20px 5%;
     background-color: var(--beige-claire);
 }
 
-.text-concept-home,
-.text-brunch-home {
-    justify-content: center;
+.container-concept-home,
+.container-brunchs-home {
+    display: grid;
+    padding: 5% 0;
+}
+
+.container-concept-home {
+    grid-template-columns: .5fr 1.5fr;
+}
+
+.container-brunchs-home {
+    grid-template-columns: 1.5fr .5fr;
+}
+
+.paragraphe-bottom-home {
+    width: 80%;
+    font-size: 1.5vw;
+    color: var(--marron-fonce);
 }
 
 .paragraphe-bottom-home.un {
-    font-size: 1.5vw;
     text-align: right;
-    width: 80%;
-    color: var(--marron-fonce);
-
 }
 
 .paragraphe-bottom-home.deux {
-    font-size: 1.5vw;
     text-align: left;
-    width: 80%;
     padding-left: 20%;
-    color: var(--marron-fonce);
 }
 
 .ligne-separatoire {
+    justify-self: center;
+    width: 50%;
+    margin: 0 40px;
     border: none;
     border-top: 4px dotted var(--marron-fonce);
-    /* Color y grosor de la línea */
-    margin: 0 40px;
-    width: 50%;
-    justify-self: center;
-    /* Espacio entre los dos divs y la línea */
 }
 
-/*--------------- Event section ---------------*/
+/* ---------- Events ---------- */
+
 .events-section {
-    background-image: url('../../assets/backgrounds/catering.webp');
-    background-size: cover;
-    background-position: center;
     position: relative;
     overflow: hidden;
-    background-attachment: fixed;
+    background: url('../../assets/backgrounds/catering.webp') center / cover fixed;
 }
 
 .events-section::before {
     content: "";
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    /* Asegura que cubra toda la sección */
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.7);
-    /* Usa rgba para opacidad */
+    inset: 0;
     z-index: 1;
+    background-color: rgba(0, 0, 0, 0.7);
 }
 
 .container-event-home {
     position: relative;
     z-index: 2;
-    /* Asegura que el contenido esté por encima del pseudo-elemento */
+}
+
+.titre-event {
+    margin-block: 0.67em;
+    padding-top: 2%;
+    text-align: center;
+    color: var(--verte-claire);
 }
 
 .paragraphe-event-home {
+    padding: 0 10% 2%;
     text-align: center;
-    padding: 0% 10% 2% 10%;
     font-size: 1.5vw;
     color: var(--beige-claire);
-}
-
-.button-event {
-    --b: 3px;
-    --s: .15em;
-    --c: var(--verte-claire);
-
-    padding: calc(.05em + var(--s)) calc(.3em + var(--s));
-    color: var(--c);
-    --_p: var(--s);
-    background:
-        conic-gradient(from 90deg at var(--b) var(--b), #0000 90deg, var(--c) 0) var(--_p) var(--_p)/calc(100% - var(--b) - 2*var(--_p)) calc(100% - var(--b) - 2*var(--_p));
-    transition: .3s linear, color 0s, background-color 0s;
-    outline: var(--b) solid #0000;
-    outline-offset: .2em;
-    font-family: 'KrabulerFont';
-    font-weight: bold;
-    font-size: 1.5rem;
-    cursor: pointer;
-    border: none;
-    margin: 0;
-    width: 180px;
-    height: 70px;
-    justify-self: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-}
-
-.button-event:hover,
-.button-event:focus-visible {
-    --_p: 0px;
-    outline-color: var(--c);
-    outline-offset: .05em;
-    background-color: var(--verte-claire);
-    color: var(--verte-fonce);
-}
-
-.button-event:active {
-    background: var(--c);
-    color: #fff;
-}
-
-.button-event .link-event {
-    color: var(--c);
-    text-decoration: none;
-    transition: color 0.3s linear;
-}
-
-.button-event:hover .link-event,
-.button-event:focus-visible .link-event {
-    color: var(--verte-fonce);
 }
 
 .event-negrita {
@@ -458,260 +232,9 @@
     font-style: oblique;
 }
 
-.titre-event {
-    text-align: center;
-    color: var(--verte-claire);
-    padding-top: 2%;
-}
-
-/*----------------------------------*/
-/*-------- Galleries Section -------*/
-/*----------------------------------*/
-
-.thumbs {
-    justify-content: center;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    justify-self: center;
-    align-items: center;
-    max-width: 100%;
-    height: auto;
-
-    >a {
-        max-width: auto;
-        height: auto;
-        margin: 2px;
-        overflow: hidden;
-
-        box-shadow: 0 0 0 3px white, 0 5px 8px 3px rgba(black, 0.6);
-
-        img {
-            transform: scale(1);
-            transition: transform 0.1s ease-in-out;
-            min-width: 100%;
-            min-height: 100%;
-            max-width: 100%;
-            max-height: 100%;
-            border-radius: 5px;
-        }
-
-        &:hover {
-            img {
-                transform: scale(1.1);
-            }
-        }
-    }
-}
-
-
-.lightbox {
-    position: fixed;
-    background: rgba(0, 0, 0, 0.8);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    height: 100%;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    left: 0;
-    top: 0;
-    z-index: 200;
-    transform: translateY(-100%);
-    opacity: 0;
-    transition: opacity 0.5s ease-in-out;
-
-    &:has(div:target) {
-        transform: translateY(0%);
-        opacity: 1;
-    }
-
-    a.nav {
-        text-decoration: none;
-        color: var(--verte-claire);
-        font-size: 40px;
-        text-shadow: 0 2px 2px rgba(black, 0.8);
-        opacity: 0.5;
-        font-weight: 200;
-
-        &:hover {
-            opacity: 1;
-        }
-    }
-
-    .overlay {
-        position: absolute;
-        height: 100%;
-        width: 100%;
-        left: 0;
-        top: 0;
-    }
-
-    .target {
-        position: absolute;
-        height: 100%;
-        width: auto;
-        display: flex;
-        transform: scale(0);
-        align-items: center;
-        justify-content: space-between;
-
-        *:first-child,
-        *:last-child {
-            flex: 0 0 100px;
-            text-align: center;
-
-            @media all and (max-width:600px) {
-                flex: 0 0 50px;
-            }
-        }
-
-        .content {
-            transform: scale(0.5);
-            opacity: 0;
-            flex: 1 1 auto;
-            align-self: center;
-            max-height: 100%;
-            min-height: 0;
-            max-width: calc(100% - 200px);
-            min-width: 0;
-            border-radius: 5px;
-            overflow: hidden;
-            box-shadow: 0 0 0 3px white, 0 5px 8px 3px rgba(black, 0.6);
-            transition: transform 0.25s ease-in-out, opacity 0.25s ease-in-out;
-
-            img {
-                min-width: 100%;
-                min-height: 100%;
-                max-width: 100%;
-                max-height: calc(100vh - 40px);
-                display: block;
-                margin: 0;
-            }
-        }
-
-        &:target {
-            transform: scale(1);
-
-            .content {
-                transform: scale(1);
-                opacity: 1;
-            }
-        }
-    }
-
-    /* Ajuste para el icono de cierre */
-    .close {
-        position: relative;
-        top: 40%;
-        /* Alinea con la parte superior */
-        right:0;
-        /* Alinea con la parte derecha */
-        z-index: 10;
-        /* Asegura que esté sobre el contenido de la imagen */
-        font-size: 4vw;
-        /* Tamaño adecuado para el ícono */
-        color: var(--verte-claire);
-        /* Color del icono */
-        cursor: pointer;
-        transition: color 0.3s ease;
-        /* Efecto suave para el hover */
-    }
-
-    .close:hover {
-        color: red;
-        /* Color de hover para mejor visibilidad */
-    }
-
-    /* Ajuste para las imágenes en la lightbox */
-    .lightbox .content {
-        position: relative;
-        /* Asegura que el icono de cierre se posicione en relación al contenedor */
-    }
-
-    .lightbox .content img {
-        width: 100%;
-        /* Asegura que la imagen ocupe todo el ancho del contenedor */
-        height: auto;
-    }
-
-}
-
-/*--------- Buttons bottom---------*/
-.vinculo-commander-home,
-.link-concept {
-    color: var(--verte-fonce);
-    text-decoration: none;
-}
-
-.cont-buttons {
-    display: flex;
-    justify-content: center;
-    justify-items: center;
-}
-
-.button-home {
-
-    font-family: 'KrabulerFont';
-    font-weight: bold;
-    font-size: 1.5rem;
-    cursor: pointer;
-    border: none;
-    width: 180px;
-    height: 70px;
-    padding: 1rem .5rem;
-
-    --b: 3px;
-    /* border thickness */
-    --s: .15em;
-    /* size of the corner */
-    --c: var(--verte-fonce);
-
-    padding: calc(.05em + var(--s)) calc(.3em + var(--s));
-    color: var(--c);
-    --_p: var(--s);
-    background:
-        conic-gradient(from 90deg at var(--b) var(--b), #0000 90deg, var(--c) 0) var(--_p) var(--_p)/calc(100% - var(--b) - 2*var(--_p)) calc(100% - var(--b) - 2*var(--_p));
-    transition: .3s linear, color 0s, background-color 0s;
-    outline: var(--b) solid #0000;
-    outline-offset: .2em;
-}
-
-.button-home:hover,
-.button-home:focus-visible {
-    --_p: 0px;
-    outline-color: var(--c);
-    outline-offset: .05em;
-    background-color: var(--verte-claire);
-}
-
-.button-home:active {
-    background: var(--c);
-    color: #fff;
-}
-
-
-
-@keyframes show {
-    from {
-        opacity: 0;
-        scale: 25%;
-    }
-
-    to {
-        opacity: 1;
-        scale: 100%;
-    }
-}
-
-
+/* ---------- Tablet ---------- */
 
 @media screen and (max-width: 960px) {
-
-    /*-------------------------*/
-    /* FONT SIZE H2 ET P  */
-    /*-------------------------*/
-
     .titre-descrp {
         font-size: 4vw;
     }
@@ -720,20 +243,12 @@
         font-size: 3vw;
     }
 
-    /*-------------------------*/
-    /* SECTION 1 ET 2  */
-    /*-------------------------*/
     .home-description,
     .home-histoire {
         grid-template-columns: 100%;
         grid-template-rows: auto auto;
         height: auto;
         padding: 5% 0;
-        margin: 0;
-    }
-
-    .home-text-histoire {
-        grid-row: 1;
     }
 
     .home-text,
@@ -741,20 +256,19 @@
         padding: 5%;
     }
 
-    /*-------------------------*/
-    /* Images et animation S1 et S2 */
-    /*-------------------------*/
+    .home-text-histoire {
+        grid-row: 1;
+    }
 
     .descr-img,
     .histoire-img {
-        padding: 0;
-        margin: 0;
         justify-content: center;
+        margin: 0;
+        padding: 0 0 5%;
     }
 
     .descr-img {
         width: 100%;
-        height: auto;
     }
 
     .imagen-home-descr,
@@ -762,38 +276,17 @@
         width: 40%;
     }
 
-    .descr-img,
-    .histoire-img {
-        padding-bottom: 5%;
-    }
-
-    /*-------------------------*/
-    /* Section Mots Createur*/
-    /*-------------------------*/
     .home-mots-createur {
         height: 80vh;
-    }
-
-    .home-text-createur {
-        padding: 0 10%;
     }
 
     .mots {
         font-size: 3.5vw;
     }
 
-    /*-------------------------*/
-    /* Section Photos concept et brunchs*/
-    /*-------------------------*/
-    .container-brunchs-home,
-    .container-concept-home {
+    .container-concept-home,
+    .container-brunchs-home {
         grid-template-columns: 1fr;
-        padding: 5% 0;
-        margin: 0;
-    }
-
-    .text-brunch-home {
-        grid-row: 1;
     }
 
     .text-concept-home,
@@ -801,43 +294,23 @@
         padding: 5% 0;
     }
 
-    .paragraphe-bottom-home.un,
-    .paragraphe-bottom-home.deux {
-        text-align: center;
-        width: 100%;
-        padding: 0 0 5% 0;
-        margin: 0;
-        font-size: 3vw;
+    .text-brunch-home {
+        grid-row: 1;
     }
 
-    /*----------------------------------*/
-    /*-------- Galleries Section -------*/
-    /*----------------------------------*/
-    .thumbs {
-        grid-template-columns: 1fr 1fr;
-        height: auto;
-        max-width: 80%;
-        gap: 10px;
-
-        >a {
-            height: auto;
-
-            img {
-                min-width: auto;
-                min-height: auto;
-                max-width: auto;
-                max-height: auto;
-            }
-        }
-
+    .paragraphe-bottom-home.un,
+    .paragraphe-bottom-home.deux {
+        width: 100%;
+        margin: 0;
+        padding: 0 0 5%;
+        text-align: center;
+        font-size: 3vw;
     }
 }
 
-@media screen and (max-width: 750px) {
-    /*-------------------------*/
-    /* FONT SIZE H2 ET P  */
-    /*-------------------------*/
+/* ---------- Mobile ---------- */
 
+@media screen and (max-width: 750px) {
     .titre-descrp {
         font-size: 8vw;
     }
@@ -846,9 +319,6 @@
         font-size: 6vw;
     }
 
-    /*-------------------------*/
-    /* Images et animation S1 et S2 */
-    /*-------------------------*/
     .imagen-home-descr,
     .imagen-hist {
         width: 80%;
@@ -859,91 +329,30 @@
         padding-bottom: 10%;
     }
 
-    /*-------------------------*/
-    /*Section DIvider*/
-    /*-------------------------*/
-
+    /* Keep a single bar of each colour */
     .section-divider {
-        border: 12px solid var(--verte-claire);
-        border-style: hidden hidden solid hidden;
+        border-style: hidden hidden solid;
     }
 
     .section-divider2 {
-        border: 15px var(--marron-fonce);
-        border-style: solid hidden hidden hidden;
+        border-style: solid hidden hidden;
     }
 
-    /*-------------------------*/
-    /* Section Mots Createur*/
-    /*-------------------------*/
     .home-mots-createur {
         height: 60vh;
-    }
-
-    .home-text-createur {
-        padding: 0 10%;
     }
 
     .mots {
         font-size: 6vw;
     }
 
-    .foto-chef {
-        width: 35%;
-    }
-
     .paragraphe-bottom-home.un,
     .paragraphe-bottom-home.deux {
-
         font-size: 6vw;
-    }
-
-
-
-    /*----------------------------------*/
-    /*-------- Galleries Section -------*/
-    /*----------------------------------*/
-    .thumbs {
-        grid-template-columns: 1fr 1fr;
-        height: auto;
-        max-width: 100%;
-        gap: 5px; /* Reduce gap between items for smaller screens */
-        padding: 5px;
-    }
-
-    .thumbs > a img {
-        width: 100%; /* Make images responsive */
-        height: 100%; /* Ensure height fills container */
-        object-fit: cover; /* Maintain aspect ratio, cropping if necessary */
-    }
-
-    .lightbox {
-        margin: 0;
-
-        .close {
-            bottom: 10%;
-        }
-
-        .target {
-            .content {
-                max-width: calc(100%);
-            }
-        }
     }
 
     .titre-event {
         padding: 0 5%;
         font-size: 8vw;
     }
-}
-/* Was an h1 before the logo became the page title; keep its original spacing */
-h2.titre-event {
-    margin-block: 0.67em;
-}
-
-/* Thumbnails are a taller crop of the same photo shown in the lightbox */
-.thumbs > a img {
-    aspect-ratio: 305 / 427;
-    object-fit: cover;
-    display: block;
 }

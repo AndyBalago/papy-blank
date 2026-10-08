@@ -1,0 +1,68 @@
+/*
+ * Outlined call-to-action with corner brackets that close into a frame on hover.
+ * Usable on <a> and <button>. Colour variants only change the custom properties.
+ */
+.btn-corner {
+    --b: 3px;   /* frame thickness */
+    --s: .15em; /* corner length */
+    --_p: var(--s);
+    --c: var(--verte-fonce);
+    --hover-bg: var(--verte-claire);
+    --hover-color: var(--c);
+    --active-bg: var(--c);
+    --active-color: #fff;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 180px;
+    height: 70px;
+    padding: calc(.05em + var(--s)) calc(.3em + var(--s));
+    border: none;
+    font-family: var(--font-display);
+    font-weight: bold;
+    font-size: 1.5rem;
+    color: var(--c);
+    cursor: pointer;
+    background:
+        conic-gradient(from 90deg at var(--b) var(--b), #0000 90deg, var(--c) 0)
+        var(--_p) var(--_p) / calc(100% - var(--b) - 2 * var(--_p)) calc(100% - var(--b) - 2 * var(--_p));
+    outline: var(--b) solid #0000;
+    outline-offset: .2em;
+    transition: .3s linear, color 0s, background-color 0s;
+}
+
+.btn-corner:hover,
+.btn-corner:focus-visible {
+    --_p: 0px;
+    outline-color: var(--c);
+    outline-offset: .05em;
+    background-color: var(--hover-bg);
+    color: var(--hover-color);
+}
+
+.btn-corner:active {
+    background: var(--active-bg);
+    color: var(--active-color);
+}
+
+/* Light green, for dark or brown backgrounds */
+.btn-corner--light {
+    --c: var(--verte-claire);
+    --hover-color: var(--verte-fonce);
+}
+
+/* Brown, for light green backgrounds */
+.btn-corner--brown {
+    --c: var(--marron-fonce);
+    --hover-bg: var(--marron-fonce);
+    --hover-color: var(--beige-claire);
+    --active-bg: var(--beige-claire);
+    --active-color: var(--marron-fonce);
+}
+
+/* Cream, for brown backgrounds */
+.btn-corner--cream {
+    --c: var(--beige-claire);
+    --hover-bg: var(--verte-fonce);
+}

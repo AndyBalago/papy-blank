@@ -10,6 +10,11 @@
   --marron-fonce: rgb(127, 91, 80);
   --beige-claire: rgb(244, 237, 227);
   --primary: var(--verte-fonce);
+
+  --font-display: 'KrabulerFont';
+
+  /* Breakpoints used in media queries (CSS variables cannot be used there):
+     tablet <= 960px, mobile <= 750px */
 }
 
 *,
@@ -20,7 +25,7 @@
 
 body {
   margin: 0;
-  font-family: 'KrabulerFont';
+  font-family: var(--font-display);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
